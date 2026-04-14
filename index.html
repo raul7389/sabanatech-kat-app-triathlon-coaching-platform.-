@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://cdn.tailwindcss.com"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Katherine Michelle Gomez Aya | Ironman Certified Coach</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- FIX 1 (Performance): Precargar imagen LCP para reducir LCP de 6.9s -->
+    <!-- La imagen kat-ironman-1.png es el LCP. Precargarla permite que el navegador
+         la descargue antes de parsear el HTML y encontrar el <img> tag -->
+    <link rel="preload" href="assets/kat-ironman-1.png" as="image" fetchpriority="high">
+
+    <!-- FIX 2 (Performance): Eliminar Tailwind CDN (era el script src="cdn.tailwindcss.com")
+         El sitio usa CSS propio — Tailwind CDN añadía 124KiB sin usar y bloqueaba el render 250ms -->
+
+    <!-- FIX 3 (Performance): Google Fonts cargado de forma NO bloqueante
+         Antes: <link rel="stylesheet"> bloqueaba el render 200ms
+         Ahora: preconnect + preload con onload para carga asíncrona -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"></noscript>
     <style>
         :root {
             --iron-red: #E4002B;
@@ -65,8 +79,11 @@
             border: 2px solid transparent; transition: all 0.3s ease;
             cursor: pointer; background: transparent;
         }
+        /* FIX 4 (Accesibilidad): Color activo/hover del nav cambiado de #E4002B a #FF0033
+           #E4002B sobre negro = ratio 4.38:1 (falla WCAG AA 4.5:1 para texto normal)
+           #FF0033 sobre negro = ratio 5.3:1 (pasa WCAG AA) — rojo levemente más brillante */
         .nav-link:hover, .nav-link.active {
-            color: var(--iron-red); border-color: var(--iron-red);
+            color: #FF0033; border-color: #FF0033;
         }
 
         /* LANGUAGE SWITCHER */
@@ -439,6 +456,11 @@
     </div>
 </header>
 
+<!-- FIX 5 (Accesibilidad): Elemento <main> como punto de referencia principal
+     Requerido por WCAG 2.1 para lectores de pantalla. Sin él, los usuarios de
+     tecnología asistiva no pueden saltar directamente al contenido principal. -->
+<main id="main-content">
+
 <!-- HOME -->
 <section id="home" class="section active">
     <div class="hero">
@@ -469,7 +491,9 @@
         </div>
         <div class="about-grid">
             <div class="about-image">
-                <img src="assets/kat-ironman-1.png" alt="Coach Katherine">
+                <!-- fetchpriority="high" + loading="eager": refuerza la prioridad de descarga
+                     del LCP junto con el preload en el <head> -->
+                <img src="assets/kat-ironman-1.png" alt="Coach Katherine Gomez Aya - Ironman Certified Coach" fetchpriority="high" loading="eager" width="600" height="500">
             </div>
             <div class="about-content">
                 <h3 data-i18n="about_h3">Training Champions Since 2018</h3>
@@ -671,6 +695,8 @@
         </div>
     </div>
 </section>
+
+</main><!-- /main-content -->
 
 <!-- FOOTER -->
 <footer class="footer">
