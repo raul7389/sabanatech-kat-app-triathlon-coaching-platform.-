@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Katherine Michelle Gomez Aya | Ironman Certified Coach</title>
+    <title>Katherine Gomez Aya | Ironman Certified Coach</title>
 
     <!-- FIX 1 (Performance): Precargar imagen LCP para reducir LCP de 6.9s -->
     <!-- La imagen kat-ironman-1.png es el LCP. Precargarla permite que el navegador
@@ -448,10 +448,12 @@
             <button class="nav-link" onclick="showSection('testimonials')" data-section="testimonials" data-i18n="nav_testimonials">Testimonials</button>
             <button class="nav-link" onclick="showSection('contact')" data-section="contact" data-i18n="nav_contact">Contact</button>
         </nav>
+        <!-- Idiomas: FR reemplazado por IT (Italiano), PT (Portugués) agregado -->
         <div class="lang-switcher">
             <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
             <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
-            <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">FR</button>
+            <button class="lang-btn" data-lang="it" onclick="setLang('it')">IT</button>
+            <button class="lang-btn" data-lang="pt" onclick="setLang('pt')">PT</button>
         </div>
     </div>
 </header>
@@ -466,8 +468,9 @@
     <div class="hero">
         <div class="hero-content">
             <div class="hero-badge" data-i18n="hero_badge">Ironman Certified Coach</div>
+            <!-- Nombre acortado: "Katherine Michelle" → "Katherine" para que quepa en mobile -->
             <h1>
-                Katherine Michelle
+                Katherine
                 <span class="highlight">Gomez Aya</span>
             </h1>
             <p class="hero-subtitle" data-i18n="hero_subtitle">Complete Triathlon Training</p>
@@ -497,7 +500,7 @@
             </div>
             <div class="about-content">
                 <h3 data-i18n="about_h3">Training Champions Since 2018</h3>
-                <p data-i18n="about_p1">I am Katherine Michelle Gomez Aya, an Ironman Certified Coach and triathlon training specialist. With over 6 years of experience preparing athletes of all levels, from beginners to Ironman competitors, my passion is helping you cross that finish line.</p>
+                <p data-i18n="about_p1">I am Katherine Gomez Aya, Ironman Certified Coach and triathlon training specialist. With over 6 years of experience preparing athletes of all levels, from beginners to Ironman competitors, my passion is helping you cross that finish line.</p>
                 <p data-i18n="about_p2">My approach combines sports training science with the mindset of a champion. I design personalized plans that integrate swimming, cycling, and athletics, optimizing each session to maximize your performance and minimize injury risk.</p>
                 <p data-i18n="about_p3">My mission is simple but powerful: to guide you to conquer your athletic goals, whether completing your first sprint triathlon or achieving a podium in an Ironman 140.6.</p>
                 <div class="stats-grid">
@@ -642,7 +645,7 @@
                     <div class="contact-icon">📧</div>
                     <div>
                         <h4 data-i18n="contact_email_label">Email</h4>
-                        <p>coach@katherinegomez.com</p>
+                        <p>katherinegomezaya@gmail.com</p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -700,13 +703,14 @@
 
 <!-- FOOTER -->
 <footer class="footer">
+    <!-- Fix redes sociales: enlaces reales con rel="noopener" por seguridad -->
     <div class="social-links">
-        <a href="#" class="social-link" title="Instagram">📷</a>
-        <a href="#" class="social-link" title="Facebook">f</a>
+        <a href="https://www.instagram.com/k.gomez.a" class="social-link" title="Instagram @k.gomez.a" target="_blank" rel="noopener noreferrer">📷</a>
+        <a href="https://www.facebook.com/share/1DHzAnPfqA/?mibextid=wwXIfr" class="social-link" title="Facebook" target="_blank" rel="noopener noreferrer">f</a>
         <a href="#" class="social-link" title="Strava">🏃</a>
         <a href="#" class="social-link" title="YouTube">▶</a>
     </div>
-    <p data-i18n="footer_copyright">© 2025 Katherine Michelle Gomez Aya. All rights reserved.</p>
+    <p data-i18n="footer_copyright">© 2025 Katherine Gomez Aya. All rights reserved.</p>
     <p style="margin-top:10px; font-size:0.8rem;" data-i18n="footer_tagline">Ironman Certified Coach | Triathlon · Swimming · Cycling · Athletics</p>
 </footer>
 
@@ -749,7 +753,7 @@ const T = {
         about_tag:'Meet Me', about_title:'About Me',
         about_subtitle:'Your IRONMAN certified coach on the road to the finish line',
         about_h3:'Training Champions Since 2018',
-        about_p1:'I am Katherine Michelle Gomez Aya, an Ironman Certified Coach and triathlon training specialist. With over 6 years of experience preparing athletes of all levels, from beginners to Ironman competitors, my passion is helping you cross that finish line.',
+        about_p1:'I am Katherine Gomez Aya, Ironman Certified Coach and triathlon training specialist. With over 6 years of experience preparing athletes of all levels, from beginners to Ironman competitors, my passion is helping you cross that finish line.',
         about_p2:'My approach combines sports training science with the mindset of a champion. I design personalized plans that integrate swimming, cycling, and athletics, optimizing each session to maximize your performance and minimize injury risk.',
         about_p3:'My mission is simple but powerful: to guide you to conquer your athletic goals, whether completing your first sprint triathlon or achieving a podium in an Ironman 140.6.',
         stat1_num:'500+', stat1_label:'Athletes Trained',
@@ -782,7 +786,7 @@ const T = {
         form_message_label:'Your Message', form_message_placeholder:'Tell me about your current level, your goal and any previous injuries...',
         btn_submit:'Request Free Assessment',
         form_success:'Thank you for your message! I will contact you soon to schedule your initial assessment.',
-        footer_copyright:'© 2025 Katherine Michelle Gomez Aya. All rights reserved.',
+        footer_copyright:'© 2025 Katherine Gomez Aya. All rights reserved.',
         footer_tagline:'Ironman Certified Coach | Triathlon · Swimming · Cycling · Athletics',
         modal_title:'Add Your Testimonial', modal_name_label:'Full Name', modal_name_placeholder:'Your name',
         modal_role_label:'Achievement / Location', modal_role_placeholder:'e.g.: Ironman 70.3 Finisher, Dubai',
@@ -799,7 +803,7 @@ const T = {
         about_tag:'Conóceme', about_title:'Sobre Mí',
         about_subtitle:'Tu coach certificada IRONMAN en el camino hacia la línea de meta',
         about_h3:'Entrenando Campeones Desde el 2018',
-        about_p1:'Soy Katherine Michelle Gomez Aya, Ironman Certified Coach y especialista en entrenamiento de triatlón. Con más de 6 años de experiencia preparando atletas de todos los niveles, desde principiantes hasta competidores de Ironman, mi pasión es ayudarte a cruzar esa línea de meta.',
+        about_p1:'Soy Katherine Gomez Aya, Ironman Certified Coach y especialista en entrenamiento de triatlón. Con más de 6 años de experiencia preparando atletas de todos los niveles, desde principiantes hasta competidores de Ironman, mi pasión es ayudarte a cruzar esa línea de meta.',
         about_p2:'Mi enfoque combina la ciencia del entrenamiento deportivo con la mentalidad de un campeón. Diseño planes personalizados que integran natación, ciclismo y atletismo, optimizando cada sesión para maximizar tu rendimiento y minimizar el riesgo de lesiones.',
         about_p3:'Mi misión es simple pero poderosa: guiarte para que conquistes tus metas atléticas, ya sea completar tu primer triatlón sprint o lograr un podium en un Ironman 140.6.',
         stat1_num:'500+', stat1_label:'Atletas Entrenados',
@@ -832,62 +836,114 @@ const T = {
         form_message_label:'Tu Mensaje', form_message_placeholder:'Cuéntame sobre tu nivel actual, tu objetivo y cualquier lesión previa...',
         btn_submit:'Solicitar Evaluación Gratuita',
         form_success:'¡Gracias por tu mensaje! Te contactaré pronto para agendar tu evaluación inicial.',
-        footer_copyright:'© 2025 Katherine Michelle Gomez Aya. Todos los derechos reservados.',
+        footer_copyright:'© 2025 Katherine Gomez Aya. Todos los derechos reservados.',
         footer_tagline:'Ironman Certified Coach | Triatlón · Natación · Ciclismo · Atletismo',
         modal_title:'Agregar Tu Testimonio', modal_name_label:'Nombre Completo', modal_name_placeholder:'Tu nombre',
         modal_role_label:'Logro / Ubicación', modal_role_placeholder:'Ej: Ironman 70.3 Finisher, Dubai',
         modal_text_label:'Tu Testimonio', modal_text_placeholder:'Comparte tu experiencia con el entrenamiento de Katherine...',
         modal_submit:'Enviar Testimonio', modal_cancel:'Cancelar'
     },
-    fr: {
-        nav_home:'Accueil', nav_about:'À Propos', nav_services:'Services',
-        nav_testimonials:'Témoignages', nav_contact:'Contact',
-        hero_badge:'Coach Certifiée Ironman',
-        hero_subtitle:'Entraînement Complet pour le Triathlon',
-        hero_description:"Coach professionnelle certifiée IRONMAN avec plus de 6 ans d'expérience dans l'entraînement d'athlètes de tous niveaux. Spécialiste de la préparation aux triathlons sprint, olympique, 70.3 et Full Ironman. Transformez vos performances avec un entraînement complet conçu pour repousser vos limites.",
-        btn_programs:"Voir les Programmes d'Entraînement", btn_start:'Commencer Votre Entraînement',
-        about_tag:'Découvrez-moi', about_title:'À Propos',
-        about_subtitle:"Votre coach certifiée IRONMAN sur la route vers la ligne d'arrivée",
-        about_h3:'Former des Champions Depuis 2018',
-        about_p1:"Je suis Katherine Michelle Gomez Aya, Coach Certifiée Ironman et spécialiste de l'entraînement au triathlon. Avec plus de 6 ans d'expérience dans la préparation d'athlètes de tous niveaux, des débutants aux compétiteurs Ironman, ma passion est de vous aider à franchir cette ligne d'arrivée.",
-        about_p2:"Mon approche combine la science de l'entraînement sportif avec la mentalité d'un champion. Je conçois des plans personnalisés qui intègrent natation, cyclisme et athlétisme, optimisant chaque séance pour maximiser vos performances et minimiser les risques de blessures.",
-        about_p3:"Ma mission est simple mais puissante : vous guider pour conquérir vos objectifs athlétiques, que ce soit compléter votre premier triathlon sprint ou atteindre le podium dans un Ironman 140.6.",
-        stat1_num:'500+', stat1_label:'Athlètes Entraînés',
-        stat2_num:'120+', stat2_label:'Ironman Complétés',
-        stat3_num:'15+',  stat3_label:'Podiums avec Mes Athlètes',
-        services_tag:'Programmes', services_title:'Entraînement',
-        services_subtitle:"Plans conçus pour la Natation, le Cyclisme et l'Athlétisme · Préparation Ironman complète",
-        svc1_title:'Natation', svc1_desc:'Technique du crawl, respiration efficace, virages, départs et demi-tours. Entraînement en piscine et en eau libre. Préparation des distances sprint à Ironman.', svc1_price:'À partir de 80$/mois',
-        svc2_title:'Cyclisme', svc2_desc:'Entraînement en puissance, endurance, technique de pédalage et maniement du vélo. Plans pour la route et le triathlon. Optimisation aérodynamique et transitions.', svc2_price:'À partir de 100$/mois',
-        svc3_title:'Athlétisme', svc3_desc:"Course efficace, technique de course, prévention des blessures et planification du rythme. Du 5K au marathon. Stratégies pour le mur Ironman.", svc3_price:'À partir de 80$/mois',
-        svc4_title:'Triathlon Sprint & Olympique', svc4_desc:'Plan complet à 3 disciplines. Entraînement progressif pour votre premier triathlon ou pour améliorer votre temps. Inclut les stratégies de transition T1 et T2.', svc4_price:'À partir de 250$/mois',
-        svc5_title:'Ironman 70.3', svc5_desc:'Préparation spécialisée pour le semi-Ironman : 1,9 km natation + 90 km cyclisme + 21,1 km course. Plan de 16-20 semaines avec périodisation scientifique.', svc5_price:'À partir de 350$/mois',
-        svc6_title:'Ironman 140.6 Full', svc6_desc:'Entraînement élite pour le défi ultime : 3,8 km natation + 180 km cyclisme + 42,2 km marathon. Plan de 24-32 semaines. Inclut nutrition sportive et mentalité gagnante.', svc6_price:'À partir de 500$/mois',
-        btn_free_eval:'Réservez Votre Évaluation Gratuite',
-        test_tag:'Histoires de Succès', test_title:'Témoignages',
-        test_subtitle:"Athlètes qui ont franchi la ligne d'arrivée avec mon entraînement",
-        btn_add_testimonial:'+ Ajouter un Témoignage',
-        contact_tag:'Commençons', contact_title:'Contact',
-        contact_subtitle:"Faites le premier pas vers votre prochaine ligne d'arrivée",
-        contact_info_title:'Informations de Contact',
-        contact_email_label:'Email', contact_phone_label:'Téléphone / WhatsApp',
-        contact_location_label:'Localisation',
-        contact_location_text:'Doha, Qatar<br>Entraînement en piscine, route et piste disponible',
-        contact_hours_label:"Horaires d'Entraînement",
-        contact_hours_text:"Lundi au Vendredi : 5h30 - 9h00 &amp; 17h00 - 21h00<br>Samedis : 6h00 - 12h00",
-        form_name_label:'Nom Complet', form_name_placeholder:'Votre nom',
-        form_email_label:'Adresse Email', form_email_placeholder:'votre@email.com',
-        form_phone_label:'Téléphone', form_phone_placeholder:'+974 33 106 749',
-        form_service_label:"Type d'Entraînement", form_service_placeholder:'Ex : Natation, Cyclisme, Triathlon Sprint, Ironman...',
-        form_message_label:'Votre Message', form_message_placeholder:"Parlez-moi de votre niveau actuel, votre objectif et toute blessure antérieure...",
-        btn_submit:'Demander une Évaluation Gratuite',
-        form_success:'Merci pour votre message ! Je vous contacterai bientôt pour programmer votre évaluation initiale.',
-        footer_copyright:'© 2025 Katherine Michelle Gomez Aya. Tous droits réservés.',
-        footer_tagline:'Coach Certifiée Ironman | Triathlon · Natation · Cyclisme · Athlétisme',
-        modal_title:'Ajouter Votre Témoignage', modal_name_label:'Nom Complet', modal_name_placeholder:'Votre nom',
-        modal_role_label:'Réussite / Localisation', modal_role_placeholder:'Ex : Finisher Ironman 70.3, Dubaï',
-        modal_text_label:'Votre Témoignage', modal_text_placeholder:"Partagez votre expérience avec l'entraînement de Katherine...",
-        modal_submit:'Soumettre le Témoignage', modal_cancel:'Annuler'
+    /* FR reemplazado por IT (Italiano) */
+    it: {
+        nav_home:'Home', nav_about:'Chi Sono', nav_services:'Servizi',
+        nav_testimonials:'Testimonianze', nav_contact:'Contatto',
+        hero_badge:'Coach Certificata Ironman',
+        hero_subtitle:'Allenamento Completo per il Triathlon',
+        hero_description:"Coach professionista certificata IRONMAN con oltre 6 anni di esperienza nell'allenamento di atleti di tutti i livelli. Specialista nella preparazione per triathlon sprint, olimpico, 70.3 e Full Ironman. Trasforma le tue prestazioni con un allenamento completo progettato per superare i tuoi limiti.",
+        btn_programs:"Vedi i Programmi di Allenamento", btn_start:'Inizia il Tuo Allenamento',
+        about_tag:'Scoprimi', about_title:'Chi Sono',
+        about_subtitle:"La tua coach certificata IRONMAN sulla strada verso il traguardo",
+        about_h3:'Formo Campioni dal 2018',
+        about_p1:"Sono Katherine Gomez Aya, Coach Certificata Ironman e specialista in allenamento per il triathlon. Con oltre 6 anni di esperienza nella preparazione di atleti di tutti i livelli, dai principianti ai concorrenti Ironman, la mia passione è aiutarti a tagliare quel traguardo.",
+        about_p2:"Il mio approccio combina la scienza dell'allenamento sportivo con la mentalità di un campione. Progetto piani personalizzati che integrano nuoto, ciclismo e atletica, ottimizzando ogni sessione per massimizzare le tue prestazioni e ridurre al minimo il rischio di infortuni.",
+        about_p3:"La mia missione è semplice ma potente: guidarti a conquistare i tuoi obiettivi atletici, che si tratti di completare il tuo primo triathlon sprint o raggiungere il podio in un Ironman 140.6.",
+        stat1_num:'500+', stat1_label:'Atleti Allenati',
+        stat2_num:'120+', stat2_label:'Ironman Completati',
+        stat3_num:'15+',  stat3_label:'Podi con i Miei Atleti',
+        services_tag:'Programmi', services_title:'Allenamento',
+        services_subtitle:"Piani progettati per Nuoto, Ciclismo e Atletica · Preparazione Ironman completa",
+        svc1_title:'Nuoto', svc1_desc:'Tecnica del crawl, respirazione efficiente, virate, partenze e capovolta. Allenamento in piscina e in acque libere. Preparazione dalle distanze sprint all\'Ironman.', svc1_price:'Da 80$/mese',
+        svc2_title:'Ciclismo', svc2_desc:'Allenamento di potenza, resistenza, tecnica di pedalata e gestione della bici. Piani per strada e triathlon. Ottimizzazione aerodinamica e transizioni.', svc2_price:'Da 100$/mese',
+        svc3_title:'Atletica', svc3_desc:"Corsa efficiente, tecnica di gara, prevenzione degli infortuni e pianificazione del ritmo. Dal 5K alla maratona. Strategie per il muro Ironman.", svc3_price:'Da 80$/mese',
+        svc4_title:'Triathlon Sprint & Olimpico', svc4_desc:'Piano completo a 3 discipline. Allenamento progressivo per il tuo primo triathlon o per migliorare il tuo tempo. Include strategie di transizione T1 e T2.', svc4_price:'Da 250$/mese',
+        svc5_title:'Ironman 70.3', svc5_desc:'Preparazione specializzata per il mezzo Ironman: 1,9 km nuoto + 90 km ciclismo + 21,1 km corsa. Piano di 16-20 settimane con periodizzazione scientifica.', svc5_price:'Da 350$/mese',
+        svc6_title:'Ironman 140.6 Full', svc6_desc:'Allenamento elite per la sfida ultima: 3,8 km nuoto + 180 km ciclismo + 42,2 km maratona. Piano di 24-32 settimane. Include nutrizione sportiva e mentalità vincente.', svc6_price:'Da 500$/mese',
+        btn_free_eval:'Prenota la Tua Valutazione Gratuita',
+        test_tag:'Storie di Successo', test_title:'Testimonianze',
+        test_subtitle:"Atleti che hanno tagliato il traguardo con il mio allenamento",
+        btn_add_testimonial:'+ Aggiungi Testimonianza',
+        contact_tag:'Iniziamo', contact_title:'Contatto',
+        contact_subtitle:"Fai il primo passo verso il tuo prossimo traguardo",
+        contact_info_title:'Informazioni di Contatto',
+        contact_email_label:'Email', contact_phone_label:'Telefono / WhatsApp',
+        contact_location_label:'Posizione',
+        contact_location_text:'Doha, Qatar<br>Allenamento in piscina, strada e pista disponibile',
+        contact_hours_label:"Orari di Allenamento",
+        contact_hours_text:"Lunedì-Venerdì: 5:30 - 9:00 &amp; 17:00 - 21:00<br>Sabato: 6:00 - 12:00",
+        form_name_label:'Nome Completo', form_name_placeholder:'Il tuo nome',
+        form_email_label:'Indirizzo Email', form_email_placeholder:'tua@email.com',
+        form_phone_label:'Telefono', form_phone_placeholder:'+974 33 106 749',
+        form_service_label:"Tipo di Allenamento", form_service_placeholder:'Es.: Nuoto, Ciclismo, Triathlon Sprint, Ironman...',
+        form_message_label:'Il Tuo Messaggio', form_message_placeholder:"Parlami del tuo livello attuale, del tuo obiettivo e di eventuali infortuni precedenti...",
+        btn_submit:'Richiedi una Valutazione Gratuita',
+        form_success:'Grazie per il tuo messaggio! Ti contatterò presto per programmare la tua valutazione iniziale.',
+        footer_copyright:'© 2025 Katherine Gomez Aya. Tutti i diritti riservati.',
+        footer_tagline:'Coach Certificata Ironman | Triathlon · Nuoto · Ciclismo · Atletica',
+        modal_title:'Aggiungi la Tua Testimonianza', modal_name_label:'Nome Completo', modal_name_placeholder:'Il tuo nome',
+        modal_role_label:'Risultato / Posizione', modal_role_placeholder:'Es.: Finisher Ironman 70.3, Dubai',
+        modal_text_label:'La Tua Testimonianza', modal_text_placeholder:"Condividi la tua esperienza con l'allenamento di Katherine...",
+        modal_submit:'Invia Testimonianza', modal_cancel:'Annulla'
+    },
+    /* PT — Português */
+    pt: {
+        nav_home:'Início', nav_about:'Sobre Mim', nav_services:'Serviços',
+        nav_testimonials:'Depoimentos', nav_contact:'Contato',
+        hero_badge:'Coach Certificada Ironman',
+        hero_subtitle:'Treinamento Completo para Triathlon',
+        hero_description:"Coach profissional certificada pela IRONMAN com mais de 6 anos de experiência treinando atletas de todos os níveis. Especialista na preparação para triathlons sprint, olímpico, 70.3 e Full Ironman. Transforme seu desempenho com um treinamento integral projetado para superar seus limites.",
+        btn_programs:"Ver Programas de Treinamento", btn_start:'Inicie Seu Treinamento',
+        about_tag:'Conheça-me', about_title:'Sobre Mim',
+        about_subtitle:"Sua coach certificada IRONMAN no caminho até a linha de chegada",
+        about_h3:'Formando Campeões Desde 2018',
+        about_p1:"Sou Katherine Gomez Aya, Coach Certificada Ironman e especialista em treinamento de triathlon. Com mais de 6 anos de experiência preparando atletas de todos os níveis, de iniciantes a competidores Ironman, minha paixão é ajudá-lo a cruzar aquela linha de chegada.",
+        about_p2:"Minha abordagem combina a ciência do treinamento esportivo com a mentalidade de um campeão. Desenvolvo planos personalizados que integram natação, ciclismo e atletismo, otimizando cada sessão para maximizar seu desempenho e minimizar o risco de lesões.",
+        about_p3:"Minha missão é simples, mas poderosa: guiá-lo para conquistar suas metas atléticas, seja completar seu primeiro triathlon sprint ou alcançar o pódio em um Ironman 140.6.",
+        stat1_num:'500+', stat1_label:'Atletas Treinados',
+        stat2_num:'120+', stat2_label:'Ironman Completados',
+        stat3_num:'15+',  stat3_label:'Pódios com Meus Atletas',
+        services_tag:'Programas', services_title:'Treinamento',
+        services_subtitle:"Planos para Natação, Ciclismo e Atletismo · Preparação Ironman completa",
+        svc1_title:'Natação', svc1_desc:'Técnica de crawl, respiração eficiente, viradas, saídas e giros. Treinamento em piscina e águas abertas. Preparação para distâncias sprint ao Ironman.', svc1_price:'A partir de $80/mês',
+        svc2_title:'Ciclismo', svc2_desc:'Treinamento de potência, resistência, técnica de pedalada e pilotagem. Planos para estrada e triathlon. Otimização aerodinâmica e transições.', svc2_price:'A partir de $100/mês',
+        svc3_title:'Atletismo', svc3_desc:"Corrida eficiente, técnica de prova, prevenção de lesões e planejamento de ritmo. Do 5K à maratona. Estratégias para o muro do Ironman.", svc3_price:'A partir de $80/mês',
+        svc4_title:'Triathlon Sprint & Olímpico', svc4_desc:'Plano completo de 3 disciplinas. Treinamento progressivo para seu primeiro triathlon ou para melhorar seu tempo. Inclui estratégias de transição T1 e T2.', svc4_price:'A partir de $250/mês',
+        svc5_title:'Ironman 70.3', svc5_desc:'Preparação especializada para o meio Ironman: 1,9 km natação + 90 km ciclismo + 21,1 km corrida. Plano de 16-20 semanas com periodização científica.', svc5_price:'A partir de $350/mês',
+        svc6_title:'Ironman 140.6 Full', svc6_desc:'Treinamento elite para o desafio máximo: 3,8 km natação + 180 km ciclismo + 42,2 km maratona. Plano de 24-32 semanas. Inclui nutrição esportiva e mentalidade vencedora.', svc6_price:'A partir de $500/mês',
+        btn_free_eval:'Agende Sua Avaliação Gratuita',
+        test_tag:'Histórias de Sucesso', test_title:'Depoimentos',
+        test_subtitle:"Atletas que cruzaram a linha de chegada com meu treinamento",
+        btn_add_testimonial:'+ Adicionar Depoimento',
+        contact_tag:'Vamos Começar', contact_title:'Contato',
+        contact_subtitle:"Dê o primeiro passo rumo à sua próxima linha de chegada",
+        contact_info_title:'Informações de Contato',
+        contact_email_label:'Email', contact_phone_label:'Telefone / WhatsApp',
+        contact_location_label:'Localização',
+        contact_location_text:'Doha, Qatar<br>Treinamento em piscina, estrada e pista disponível',
+        contact_hours_label:"Horários de Treinamento",
+        contact_hours_text:"Segunda a Sexta: 5:30 - 9:00 &amp; 17:00 - 21:00<br>Sábados: 6:00 - 12:00",
+        form_name_label:'Nome Completo', form_name_placeholder:'Seu nome',
+        form_email_label:'Endereço de Email', form_email_placeholder:'seu@email.com',
+        form_phone_label:'Telefone', form_phone_placeholder:'+974 33 106 749',
+        form_service_label:"Tipo de Treinamento", form_service_placeholder:'Ex.: Natação, Ciclismo, Triathlon Sprint, Ironman...',
+        form_message_label:'Sua Mensagem', form_message_placeholder:"Conte-me sobre seu nível atual, seu objetivo e quaisquer lesões anteriores...",
+        btn_submit:'Solicitar Avaliação Gratuita',
+        form_success:'Obrigado pela sua mensagem! Entrarei em contato em breve para agendar sua avaliação inicial.',
+        footer_copyright:'© 2025 Katherine Gomez Aya. Todos os direitos reservados.',
+        footer_tagline:'Coach Certificada Ironman | Triathlon · Natação · Ciclismo · Atletismo',
+        modal_title:'Adicionar Depoimento', modal_name_label:'Nome Completo', modal_name_placeholder:'Seu nome',
+        modal_role_label:'Conquista / Localização', modal_role_placeholder:'Ex.: Finisher Ironman 70.3, Dubai',
+        modal_text_label:'Seu Depoimento', modal_text_placeholder:"Compartilhe sua experiência com o treinamento de Katherine...",
+        modal_submit:'Enviar Depoimento', modal_cancel:'Cancelar'
     }
 };
 
@@ -935,11 +991,12 @@ function showSection(sectionId) {
 }
 
 /* ─── CONTACT FORM ─── */
+// Fix: removido showSection('home') — antes redirigía al inicio después de enviar,
+// ahora el usuario permanece en la sección de contacto con el form limpio.
 function handleFormSubmit(e) {
     e.preventDefault();
     alert(T[currentLang].form_success);
     e.target.reset();
-    showSection('home');
 }
 
 /* ─── TESTIMONIALS ─── */
