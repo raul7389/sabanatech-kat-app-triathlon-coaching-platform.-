@@ -73,17 +73,29 @@ import TestimonialModal from '../components/TestimonialModal.astro';
             <h2 class="section-title" data-i18n="services_title">Training</h2>
             <p class="section-subtitle" data-i18n="services_subtitle">Plans designed for Swimming, Cycling and Athletics · Complete Ironman Preparation</p>
         </div>
-        <div class="services-grid" style="max-width: 860px; margin: 0 auto;">
+        <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon">
                     <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <path d="M24 4 L40 10 L40 26 C40 36 32 43 24 46 C16 43 8 36 8 26 L8 10 Z"/>
-                        <path d="M24 16 L26 22 L32 22 L27 26 L29 32 L24 28 L19 32 L21 26 L16 22 L22 22 Z"/>
+                        <circle cx="24" cy="32" r="12"/>
+                        <path d="M20 20 L20 8 L24 12 L28 8 L28 20"/>
+                        <path d="M17 32 L21 37 L31 26"/>
                     </svg>
                 </div>
-                <h3 data-i18n="svc1_title">Triathlon (IronMan)</h3>
-                <p data-i18n="svc1_desc">Complete training for all distances: Sprint, Olympic, Ironman 70.3 and Full 140.6. Integrated swim-bike-run plans with personalized periodization and transition strategies.</p>
-                <div class="service-price" data-i18n="svc1_price">$100/month</div>
+                <h3 data-i18n="svc1_title">Sprint &amp; Olympic Triathlon</h3>
+                <p data-i18n="svc1_desc">Complete 3-discipline plan. Progressive training for your first triathlon or to improve your time. Includes T1 and T2 transition strategies.</p>
+                <div class="service-price" data-i18n="svc1_price">$70/month</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M24 4 C28 10 34 16 30 24 C28 30 32 30 30 36 C28 41 20 42 16 38 C10 32 12 24 18 20 C14 24 10 20 14 14 C17 9 20 6 24 4 Z"/>
+                        <path d="M24 26 C26 28 26 33 24 35 C22 33 22 28 24 26 Z"/>
+                    </svg>
+                </div>
+                <h3 data-i18n="svc2_title">Ironman 70.3</h3>
+                <p data-i18n="svc2_desc">Specialized preparation for half Ironman: 1.9km swim + 90km cycling + 21.1km run. 16-20 week plan with scientific periodization.</p>
+                <div class="service-price" data-i18n="svc2_price">$70/month</div>
             </div>
             <div class="service-card">
                 <div class="service-icon">
@@ -96,9 +108,20 @@ import TestimonialModal from '../components/TestimonialModal.astro';
                         <path d="M22 20 L12 22"/>
                     </svg>
                 </div>
-                <h3 data-i18n="svc2_title">Solo Running</h3>
-                <p data-i18n="svc2_desc">5K, 10K, Half Marathon and Full Marathon programs. Race technique, interval training, injury prevention and pace plans designed for your specific goal.</p>
-                <div class="service-price" data-i18n="svc2_price">$70/month</div>
+                <h3 data-i18n="svc3_title">Running</h3>
+                <p data-i18n="svc3_desc">5K, 10K, Half Marathon and Full Marathon programs. Race technique, interval training, injury prevention and pace plans for your specific goal.</p>
+                <div class="service-price" data-i18n="svc3_price">$70/month</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M24 4 L40 10 L40 26 C40 36 32 43 24 46 C16 43 8 36 8 26 L8 10 Z"/>
+                        <path d="M24 16 L26 22 L32 22 L27 26 L29 32 L24 28 L19 32 L21 26 L16 22 L22 22 Z"/>
+                    </svg>
+                </div>
+                <h3 data-i18n="svc4_title">Ironman 140.6 Full</h3>
+                <p data-i18n="svc4_desc">Elite training for the ultimate challenge: 3.8km swim + 180km cycling + 42.2km marathon. 24-32 week plan. Includes sports nutrition and winning mindset.</p>
+                <div class="service-price" data-i18n="svc4_price">$100/month</div>
             </div>
         </div>
         <div style="text-align:center; margin-top:50px;">
@@ -265,9 +288,11 @@ const T = {
         stat2_num:'120+', stat2_label:'Ironman Completed',
         stat3_num:'15+',  stat3_label:'Podiums with My Athletes',
         services_tag:'Programs', services_title:'Training',
-        services_subtitle:'Triathlon · Running · Personalized Plans for All Levels',
-        svc1_title:'Triathlon (IronMan)', svc1_desc:'Complete training for all distances: Sprint, Olympic, Ironman 70.3 and Full 140.6. Integrated swim-bike-run plans with personalized periodization and transition strategies.', svc1_price:'$100/month',
-        svc2_title:'Solo Running', svc2_desc:'5K, 10K, Half Marathon and Full Marathon programs. Race technique, interval training, injury prevention and pace plans designed for your specific goal.', svc2_price:'$70/month',
+        services_subtitle:'Sprint · Olympic · Ironman 70.3 · Running · Full Ironman',
+        svc1_title:'Sprint & Olympic Triathlon', svc1_desc:'Complete 3-discipline plan. Progressive training for your first triathlon or to improve your time. Includes T1 and T2 transition strategies.', svc1_price:'$70/month',
+        svc2_title:'Ironman 70.3', svc2_desc:'Specialized preparation for half Ironman: 1.9km swim + 90km cycling + 21.1km run. 16-20 week plan with scientific periodization.', svc2_price:'$70/month',
+        svc3_title:'Running', svc3_desc:'5K, 10K, Half Marathon and Full Marathon programs. Race technique, interval training, injury prevention and pace plans for your specific goal.', svc3_price:'$70/month',
+        svc4_title:'Ironman 140.6 Full', svc4_desc:'Elite training for the ultimate challenge: 3.8km swim + 180km cycling + 42.2km marathon. 24-32 week plan. Includes sports nutrition and winning mindset.', svc4_price:'$100/month',
         btn_free_eval:'Book Your Free Assessment',
         test_tag:'Success Stories', test_title:'Testimonials',
         test_subtitle:'Athletes who crossed the finish line with my training',
@@ -312,9 +337,11 @@ const T = {
         stat2_num:'120+', stat2_label:'Ironman Completados',
         stat3_num:'15+',  stat3_label:'Podiums con Mis Atletas',
         services_tag:'Programas', services_title:'Entrenamiento',
-        services_subtitle:'Triatlón · Running · Planes Personalizados para Todos los Niveles',
-        svc1_title:'Triatlón (IronMan)', svc1_desc:'Entrenamiento completo para todas las distancias: Sprint, Olímpico, Ironman 70.3 y Full 140.6. Planes integrados natación-ciclismo-carrera con periodización personalizada y estrategias de transición.', svc1_price:'$100/mes',
-        svc2_title:'Solo Running', svc2_desc:'Programas para 5K, 10K, Media Maratón y Maratón Completa. Técnica de carrera, entrenamientos de intervalos, prevención de lesiones y planes de ritmo diseñados para tu objetivo específico.', svc2_price:'$70/mes',
+        services_subtitle:'Sprint · Olímpico · Ironman 70.3 · Running · Full Ironman',
+        svc1_title:'Triatlón Sprint & Olímpico', svc1_desc:'Plan completo de 3 disciplinas. Entrenamiento progresivo para tu primer triatlón o para mejorar tu marca. Incluye estrategias de transición T1 y T2.', svc1_price:'$70/mes',
+        svc2_title:'Ironman 70.3', svc2_desc:'Preparación especializada para medio Ironman: 1.9km natación + 90km ciclismo + 21.1km carrera. Plan de 16-20 semanas con periodización científica.', svc2_price:'$70/mes',
+        svc3_title:'Running', svc3_desc:'Programas para 5K, 10K, Media Maratón y Maratón Completa. Técnica de carrera, intervalos, prevención de lesiones y planes de ritmo para tu objetivo específico.', svc3_price:'$70/mes',
+        svc4_title:'Ironman 140.6 Full', svc4_desc:'Entrenamiento elite para el reto máximo: 3.8km natación + 180km ciclismo + 42.2km maratón. Plan de 24-32 semanas. Incluye nutrición deportiva y mentalidad ganadora.', svc4_price:'$100/mes',
         btn_free_eval:'Reserva Tu Evaluación Gratis',
         test_tag:'Historias de Éxito', test_title:'Testimonios',
         test_subtitle:'Atletas que cruzaron la línea de meta con mi entrenamiento',
@@ -359,9 +386,11 @@ const T = {
         stat2_num:'120+', stat2_label:'Ironman Completati',
         stat3_num:'15+',  stat3_label:'Podi con i Miei Atleti',
         services_tag:'Programmi', services_title:'Allenamento',
-        services_subtitle:"Triathlon · Running · Piani Personalizzati per Tutti i Livelli",
-        svc1_title:'Triathlon (IronMan)', svc1_desc:"Allenamento completo per tutte le distanze: Sprint, Olimpico, Ironman 70.3 e Full 140.6. Piani integrati nuoto-ciclismo-corsa con periodizzazione personalizzata e strategie di transizione.", svc1_price:'$100/mese',
-        svc2_title:'Solo Running', svc2_desc:"Programmi per 5K, 10K, Mezza Maratona e Maratona Completa. Tecnica di corsa, allenamenti a intervalli, prevenzione degli infortuni e piani di ritmo progettati per il tuo obiettivo specifico.", svc2_price:'$70/mese',
+        services_subtitle:'Sprint · Olimpico · Ironman 70.3 · Running · Full Ironman',
+        svc1_title:'Triathlon Sprint & Olimpico', svc1_desc:'Piano completo a 3 discipline. Allenamento progressivo per il primo triathlon o per migliorare il tempo. Include strategie di transizione T1 e T2.', svc1_price:'$70/mese',
+        svc2_title:'Ironman 70.3', svc2_desc:'Preparazione specializzata per il mezzo Ironman: 1,9 km nuoto + 90 km ciclismo + 21,1 km corsa. Piano di 16-20 settimane con periodizzazione scientifica.', svc2_price:'$70/mese',
+        svc3_title:'Running', svc3_desc:'Programmi per 5K, 10K, Mezza Maratona e Maratona Completa. Tecnica di corsa, allenamenti a intervalli, prevenzione degli infortuni e piani di ritmo per il tuo obiettivo specifico.', svc3_price:'$70/mese',
+        svc4_title:'Ironman 140.6 Full', svc4_desc:'Allenamento elite per la sfida massima: 3,8 km nuoto + 180 km ciclismo + 42,2 km maratona. Piano di 24-32 settimane. Include nutrizione sportiva e mentalità vincente.', svc4_price:'$100/mese',
         btn_free_eval:'Prenota la Tua Valutazione Gratuita',
         test_tag:'Storie di Successo', test_title:'Testimonianze',
         test_subtitle:"Atleti che hanno tagliato il traguardo con il mio allenamento",
@@ -406,9 +435,11 @@ const T = {
         stat2_num:'120+', stat2_label:'Ironman Completados',
         stat3_num:'15+',  stat3_label:'Pódios com Meus Atletas',
         services_tag:'Programas', services_title:'Treinamento',
-        services_subtitle:"Triathlon · Running · Planos Personalizados para Todos os Níveis",
-        svc1_title:'Triathlon (IronMan)', svc1_desc:"Treinamento completo para todas as distâncias: Sprint, Olímpico, Ironman 70.3 e Full 140.6. Planos integrados natação-ciclismo-corrida com periodização personalizada e estratégias de transição.", svc1_price:'$100/mês',
-        svc2_title:'Solo Running', svc2_desc:"Programas para 5K, 10K, Meia Maratona e Maratona Completa. Técnica de corrida, treinos intervalados, prevenção de lesões e planos de ritmo projetados para seu objetivo específico.", svc2_price:'$70/mês',
+        services_subtitle:'Sprint · Olímpico · Ironman 70.3 · Running · Full Ironman',
+        svc1_title:'Triathlon Sprint & Olímpico', svc1_desc:'Plano completo de 3 disciplinas. Treinamento progressivo para seu primeiro triathlon ou para melhorar seu tempo. Inclui estratégias de transição T1 e T2.', svc1_price:'$70/mês',
+        svc2_title:'Ironman 70.3', svc2_desc:'Preparação especializada para meio Ironman: 1,9 km natação + 90 km ciclismo + 21,1 km corrida. Plano de 16-20 semanas com periodização científica.', svc2_price:'$70/mês',
+        svc3_title:'Running', svc3_desc:'Programas para 5K, 10K, Meia Maratona e Maratona Completa. Técnica de corrida, treinos intervalados, prevenção de lesões e planos de ritmo para seu objetivo específico.', svc3_price:'$70/mês',
+        svc4_title:'Ironman 140.6 Full', svc4_desc:'Treinamento elite para o desafio máximo: 3,8 km natação + 180 km ciclismo + 42,2 km maratona. Plano de 24-32 semanas. Inclui nutrição esportiva e mentalidade vencedora.', svc4_price:'$100/mês',
         btn_free_eval:'Agende Sua Avaliação Gratuita',
         test_tag:'Histórias de Sucesso', test_title:'Depoimentos',
         test_subtitle:"Atletas que cruzaram a linha de chegada com meu treinamento",
