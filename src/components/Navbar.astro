@@ -1,0 +1,28 @@
+---
+---
+<header class="header">
+    <div class="header-container">
+        <a href="#" class="logo" onclick="showSection('home')">
+            <div class="logo-icon">KA</div>
+            <div class="logo-text">Katherine <span>Gomez</span></div>
+        </a>
+        <button class="menu-toggle" id="menu-toggle" onclick="toggleMenu()" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="mobile-menu" id="mobile-menu">
+            <nav class="nav">
+                <button class="nav-link active" onclick="showSection('home')" data-section="home" data-i18n="nav_home">Home</button>
+                <button class="nav-link" onclick="showSection('about')" data-section="about" data-i18n="nav_about">About Me</button>
+                <button class="nav-link" onclick="showSection('services')" data-section="services" data-i18n="nav_services">Services</button>
+                <button class="nav-link" onclick="showSection('testimonials')" data-section="testimonials" data-i18n="nav_testimonials">Testimonials</button>
+                <button class="nav-link" onclick="showSection('contact')" data-section="contact" data-i18n="nav_contact">Contact</button>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+                <button class="lang-btn" data-lang="es" onclick="setLang('es')">ES</button>
+                <button class="lang-btn" data-lang="it" onclick="setLang('it')">IT</button>
+                <button class="lang-btn" data-lang="pt" onclick="setLang('pt')">PT</button>
+            </div>
+        </div>
+    </div>
+</header>
