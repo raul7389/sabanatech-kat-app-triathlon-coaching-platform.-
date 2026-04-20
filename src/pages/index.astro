@@ -232,7 +232,8 @@ import TestimonialModal from '../components/TestimonialModal.astro';
                         <label for="mensaje" data-i18n="form_message_label">Your Message</label>
                         <textarea id="mensaje" name="mensaje" required data-i18n-ph="form_message_placeholder" placeholder="Tell me about your current level, your goal and any previous injuries..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width:100%;" data-i18n="btn_submit">Request Free Assessment</button>
+                    <button type="submit" id="contact-submit-btn" class="btn btn-primary" style="width:100%;" data-i18n="btn_submit">Request Free Assessment</button>
+                    <div id="contact-success" style="display:none; text-align:center; margin-top:20px; padding:16px; background:rgba(228,0,43,0.1); border:1px solid var(--iron-red); border-radius:8px; font-family:var(--font-display); color:var(--iron-red); letter-spacing:0.05em;"></div>
                 </form>
             </div>
         </div>
@@ -481,69 +482,91 @@ function showSection(sectionId) {
 }
 
 /* ─── CONTACT FORM ─── */
-function handleFormSubmit(e) {
+async function handleFormSubmit(e) {
     e.preventDefault();
-    alert(T[currentLang].form_success);
+    const nombre = document.getElementById('nombre').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefono = document.getElementById('telefono').value.trim();
+    const servicio = document.getElementById('servicio').value.trim();
+    const mensaje = document.getElementById('mensaje').value.trim();
+
+    const btn = document.getElementById('contact-submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    try {
+        const formData = new FormData();
+        formData.append('access_key', '7dea30f0-2001-4f75-89ad-fc9de2293022');
+        formData.append('subject', 'Nueva consulta de entrenamiento - Kat3athlete');
+        formData.append('from_name', nombre);
+        formData.append('email', email);
+        formData.append('message',
+            `Nueva consulta recibida:\n\n` +
+            `Nombre: ${nombre}\n` +
+            `Email: ${email}\n` +
+            `Teléfono: ${telefono || 'No indicado'}\n` +
+            `Tipo de entrenamiento: ${servicio || 'No indicado'}\n\n` +
+            `Mensaje:\n${mensaje}`
+        );
+        await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+    } catch (_) {}
+
     e.target.reset();
+    btn.disabled = false;
+    btn.setAttribute('data-i18n', 'btn_submit');
+    btn.textContent = T[currentLang]?.btn_submit || 'Request Free Assessment';
+
+    const successEl = document.getElementById('contact-success');
+    successEl.textContent = T[currentLang]?.form_success || 'Thank you! I will contact you soon.';
+    successEl.style.display = 'block';
+    setTimeout(() => { successEl.style.display = 'none'; }, 5000);
 }
 
 /* ─── TESTIMONIALS ─── */
-const STORAGE_KEY = 'kg_testimonials';
 
-function getInitials(name) {
-    return name.trim().split(/\s+/).map(w => w[0].toUpperCase()).slice(0, 2).join('');
-}
-
-function loadUserTestimonials() {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-    saved.forEach((item, idx) => appendTestimonialCard(item, idx));
-}
-
-function appendTestimonialCard(item, idx, prepend) {
-    const grid = document.getElementById('testimonials-grid');
-    const card = document.createElement('div');
-    card.className = 'testimonial-card user-submitted';
-    card.dataset.idx = idx;
-    card.innerHTML = `
-        <button class="testimonial-delete" onclick="deleteTestimonial(${idx})" title="Delete">✕</button>
-        <p class="testimonial-text">${escapeHtml(item.text)}</p>
-        <div class="testimonial-author">
-            <div class="testimonial-avatar" style="background:#B8860B;">${escapeHtml(getInitials(item.name))}</div>
-            <div class="testimonial-info">
-                <h4>${escapeHtml(item.name)}</h4>
-                <span>${escapeHtml(item.role)}</span>
-            </div>
-        </div>`;
-    if (prepend && grid.firstChild) {
-        grid.insertBefore(card, grid.firstChild);
-    } else {
-        grid.appendChild(card);
-    }
-}
-
-function deleteTestimonial(idx) {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-    saved.splice(idx, 1);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-    document.querySelectorAll('.testimonial-card.user-submitted').forEach(el => el.remove());
-    saved.forEach((item, i) => appendTestimonialCard(item, i));
-}
-
-function submitTestimonial(e) {
+async function submitTestimonial(e) {
     e.preventDefault();
     const name = document.getElementById('modal-name').value.trim();
     const email = document.getElementById('modal-email').value.trim();
     const role = document.getElementById('modal-role').value.trim();
     const text = document.getElementById('modal-text').value.trim();
     if (!name || !email || !role || !text) return;
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
-    const item = { name, email, role, text };
-    saved.push(item);
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(saved));
-    closeModal();
-    showSection('testimonials');
-    appendTestimonialCard(item, saved.length - 1, true);
+
+    const btn = document.getElementById('modal-submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    try {
+        const formData = new FormData();
+        formData.append('access_key', '7dea30f0-2001-4f75-89ad-fc9de2293022');
+        formData.append('subject', 'Nuevo testimonio recibido - Kat3athlete');
+        formData.append('from_name', name);
+        formData.append('email', email);
+        formData.append('message',
+            `Nuevo testimonio recibido:\n\n` +
+            `Nombre: ${name}\n` +
+            `Email: ${email}\n` +
+            `Rol / Logro: ${role}\n\n` +
+            `Testimonio:\n${text}`
+        );
+        await fetch('https://api.web3forms.com/submit', { method: 'POST', body: formData });
+    } catch (_) {}
+
     e.target.reset();
+    btn.disabled = false;
+    btn.setAttribute('data-i18n', 'modal_submit');
+    btn.textContent = T[currentLang]?.modal_submit || 'Submit Testimonial';
+
+    const successEl = document.getElementById('modal-success');
+    if (successEl) {
+        successEl.style.display = 'block';
+        setTimeout(() => {
+            successEl.style.display = 'none';
+            closeModal();
+        }, 2500);
+    } else {
+        closeModal();
+    }
 }
 
 function escapeHtml(str) {
@@ -554,6 +577,8 @@ function escapeHtml(str) {
 function openModal() {
     document.getElementById('modal-overlay').classList.add('open');
     document.body.style.overflow = 'hidden';
+    const successEl = document.getElementById('modal-success');
+    if (successEl) successEl.style.display = 'none';
 }
 function closeModal() {
     document.getElementById('modal-overlay').classList.remove('open');
@@ -582,7 +607,6 @@ function closeMenu() {
 /* ─── INIT ─── */
 document.addEventListener('DOMContentLoaded', () => {
     setLang('en');
-    loadUserTestimonials();
     showSection('home');
 
     document.querySelectorAll('.nav-link').forEach(btn => {

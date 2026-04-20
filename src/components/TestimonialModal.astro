@@ -21,9 +21,12 @@
                 <label data-i18n="modal_text_label">Your Testimonial</label>
                 <textarea id="modal-text" required data-i18n-ph="modal_text_placeholder" placeholder="Share your experience with Katherine's training..."></textarea>
             </div>
-            <div class="btn-group" style="position:sticky; bottom:0; background:rgba(20,20,20,0.97); padding:16px 0 4px; justify-content:flex-start; gap:15px; margin-top:10px; -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);">
-                <button type="submit" class="btn btn-primary" data-i18n="modal_submit">Submit Testimonial</button>
+            <div class="btn-group" style="position:sticky; bottom:0; background:rgba(20,20,20,0.97); padding:16px 0 4px; justify-content:center; gap:15px; margin-top:10px; -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);">
+                <button type="submit" class="btn btn-primary" id="modal-submit-btn" data-i18n="modal_submit">Submit Testimonial</button>
                 <button type="button" class="btn btn-cancel" onclick="closeModal()" data-i18n="modal_cancel">Cancel</button>
+            </div>
+            <div id="modal-success" style="display:none; text-align:center; padding:20px 0 8px; font-family:var(--font-display); color:#E4002B; font-size:1.1rem; letter-spacing:0.05em;">
+                ¡Gracias! Tu testimonio fue enviado.
             </div>
         </form>
     </div>
