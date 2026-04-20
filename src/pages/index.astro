@@ -84,10 +84,13 @@ import TestimonialModal from '../components/TestimonialModal.astro';
             <div class="service-card">
                 <div class="service-icon" style="transform: scale(1.7);">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" aria-hidden="true">
-                        <circle cx="50" cy="11" r="11" fill="#E21F26"/>
-                        <path d="M5,26 L95,26 L95,94 L65,94 L50,60 L35,94 L5,94 Z" fill="#E21F26"/>
-                        <text x="50" y="43" text-anchor="middle" dominant-baseline="middle"
-                              font-size="26" font-weight="900" fill="#FFFFFF"
+                        <!-- Head: r=14, diameter=28, body width=76 → head is 37% of body width (matches reference) -->
+                        <circle cx="50" cy="14" r="14" fill="#E21F26"/>
+                        <!-- Body: x=12–88 (76 wide), y=33–97 (64 tall). Notch peak at y=65 = exact midpoint (33+32). -->
+                        <path d="M12,33 L88,33 L88,97 L64,97 L50,65 L36,97 L12,97 Z" fill="#E21F26"/>
+                        <!-- Text centered in solid zone y=33–65, center y=49 -->
+                        <text x="50" y="49" text-anchor="middle" dominant-baseline="middle"
+                              font-size="27" font-weight="900" fill="#FFFFFF"
                               font-family="'Arial Black',Impact,Arial,sans-serif"
                               letter-spacing="-0.5">70.3</text>
                     </svg>
