@@ -83,15 +83,21 @@ import TestimonialModal from '../components/TestimonialModal.astro';
             </div>
             <div class="service-card">
                 <div class="service-icon" style="transform: scale(1.7);">
-                    <svg viewBox="0 0 100 110" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" aria-hidden="true">
-                        <circle cx="50" cy="12" r="12" fill="#E4002B"/>
+                    <svg viewBox="0 0 100 116" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" aria-hidden="true">
+                        <!-- Head circle with gap below -->
+                        <circle cx="50" cy="13" r="14" fill="#E4002B"/>
                         <!--
-                          M-dot path: body rect + two legs with diagonal inner walls.
-                          Gap is narrow at body-bottom (x=40–60) and widens at feet (x=34–66),
-                          creating the authentic M letter shape. Winding rule excludes gap.
+                          Body: plain rectangle (x=10–90, y=31–105) with a V-notch cut
+                          upward from the bottom center — this produces the authentic M shape.
+                          Path winding excludes the notch area: goes CW around body,
+                          then traverses notch right-wall UPWARD (y:105→83) which cancels
+                          the outer crossing, making winding=0 inside the gap.
                         -->
-                        <path d="M 14,26 L 86,26 L 86,76 L 95,105 L 66,105 L 60,76 L 40,76 L 34,105 L 5,105 L 14,76 Z" fill="#E4002B"/>
-                        <text x="50" y="51" text-anchor="middle" dominant-baseline="middle" font-size="24" font-weight="900" fill="white" font-family="'Arial Black', Arial, sans-serif" letter-spacing="-1">70.3</text>
+                        <path d="M 10,31 L 90,31 L 90,105 L 64,105 L 50,83 L 36,105 L 10,105 Z" fill="#E4002B"/>
+                        <!-- 70.3 centered in solid body area above notch tip (y=83) -->
+                        <text x="50" y="57" text-anchor="middle" dominant-baseline="middle"
+                              font-size="28" font-weight="900" fill="white"
+                              font-family="'Arial Black', Arial, sans-serif" letter-spacing="-0.5">70.3</text>
                     </svg>
                 </div>
                 <h3 data-i18n="svc2_title">Ironman 70.3</h3>
