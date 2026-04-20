@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Head dot -->
+  <circle cx="50" cy="11" r="11" fill="#E21F26"/>
+  <!--
+    Body block: x=5–95 (90 wide), y=26–94 (68 tall).
+    V-notch from bottom rises to exact midpoint y=60 (26 + 68/2).
+    Three equal thirds at base: left leg x=5–35, gap x=35–65, right leg x=65–95.
+    Path winding (non-zero rule) naturally excludes the notch area.
+  -->
+  <path d="M5,26 L95,26 L95,94 L65,94 L50,60 L35,94 L5,94 Z" fill="#E21F26"/>
+  <!-- 70.3 centered in solid area above notch (y=26 to y=60, center y=43) -->
+  <text x="50" y="43"
+        text-anchor="middle" dominant-baseline="middle"
+        font-size="26" font-weight="900" fill="#FFFFFF"
+        font-family="'Arial Black',Impact,Arial,sans-serif"
+        letter-spacing="-0.5">70.3</text>
+</svg>
