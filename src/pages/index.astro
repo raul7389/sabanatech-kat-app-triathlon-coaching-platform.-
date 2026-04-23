@@ -39,7 +39,10 @@ import TestimonialModal from '../components/TestimonialModal.astro';
         </div>
         <div class="about-grid">
             <div class="about-image">
-                <img src="/assets/kat-ironman-1.png" alt="Coach Katherine Gomez Aya - Ironman Certified Coach" fetchpriority="high" loading="eager" width="600" height="500">
+                <picture>
+                <source srcset="/assets/kat-ironman-1.webp" type="image/webp">
+                <img src="/assets/kat-ironman-1.png" alt="Coach Katherine Gomez Aya - Ironman Certified Coach" fetchpriority="high" loading="eager" width="900" height="1200">
+            </picture>
             </div>
             <div class="about-content">
                 <h3 data-i18n="about_h3">Training Champions Since 2018</h3>
@@ -474,7 +477,10 @@ function setLang(lang) {
 function showSection(sectionId) {
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
     const target = document.getElementById(sectionId);
-    if (target) { target.classList.add('active'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    if (target) {
+        target.classList.add('active');
+        requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
     document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.toggle('active', link.getAttribute('data-section') === sectionId);
     });

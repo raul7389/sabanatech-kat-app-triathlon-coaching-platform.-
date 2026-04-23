@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kat-app-triathlon-coaching-platform.pages.dev/sitemap.xml
