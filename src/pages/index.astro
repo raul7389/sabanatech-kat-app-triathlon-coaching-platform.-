@@ -37,27 +37,119 @@ import TestimonialModal from '../components/TestimonialModal.astro';
             <h2 class="section-title" data-i18n="about_title">About Me</h2>
             <p class="section-subtitle" data-i18n="about_subtitle">Your IRONMAN certified coach on the road to the finish line</p>
         </div>
-        <div class="about-grid">
-            <div class="about-image">
-                <img src="/assets/kat-ironman-1.png" alt="Coach Katherine Gomez Aya - Ironman Certified Coach" fetchpriority="high" loading="eager" width="600" height="500">
-            </div>
+        <div class="about-grid about-grid--solo">
             <div class="about-content">
-                <h3 data-i18n="about_h3">Training Champions Since 2018</h3>
-                <p data-i18n="about_p1">I am Katherine Gomez Aya, Ironman Certified Coach and triathlon training specialist. With over 6 years of experience preparing athletes of all levels, from beginners to Ironman competitors, my passion is helping you cross that finish line.</p>
-                <p data-i18n="about_p2">My approach combines sports training science with the mindset of a champion. I design personalized plans that integrate swimming, cycling, and athletics, optimizing each session to maximize your performance and minimize injury risk.</p>
-                <p data-i18n="about_p3">My mission is simple but powerful: to guide you to conquer your athletic goals, whether completing your first sprint triathlon or achieving a podium in an Ironman 140.6.</p>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number" data-i18n="stat1_num">500+</span>
-                        <span class="stat-label" data-i18n="stat1_label">Athletes Trained</span>
+                <h3 data-i18n="about_h3">Training Champions Since 2021</h3>
+                <p data-i18n="about_p1">I'm Katherine Gomez Aya, IRONMAN Certified Coach and triathlon specialist — 16 years as both athlete and coach, having lived every stage of the journey: the early mornings, long training sessions, mental battles, and the satisfaction of crossing the finish line.</p>
+                <p data-i18n="about_p2">Since 2021, I coach athletes of all levels, from first-timers to competitors targeting IRONMAN 70.3 and 140.6. Every plan is fully personalized — blending sports science, structured methodology, and a champion's mindset across swimming, cycling, and running to maximize performance and minimize injury risk.</p>
+                <p data-i18n="about_p3">My mission: guide you step by step toward your goals — your first Sprint Triathlon, a 70.3, or the podium at a full IRONMAN 140.6.</p>
+                <p data-i18n="about_p4"><em>Because every finish line starts with a decision to begin.</em></p>
+                <div class="proven-results">
+                    <h4 class="proven-title" data-i18n="proven_title">Proven Results</h4>
+                    <div class="proven-grid">
+                        <div class="proven-item">
+                            <div class="proven-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M8 21h8M12 17v4M7 4h10l-1 8a5 5 0 01-8 0L7 4zM5 4H3l1 5a3 3 0 003 2M19 4h2l-1 5a3 3 0 01-3 2"/>
+                                </svg>
+                            </div>
+                            <div class="proven-text">
+                                <span class="proven-stat" data-i18n="proven_stat1_title">Ironman 70.3</span>
+                                <span class="proven-sub" data-i18n="proven_stat1_sub">Finisher</span>
+                            </div>
+                        </div>
+                        <div class="proven-divider"></div>
+                        <div class="proven-item">
+                            <div class="proven-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/>
+                                </svg>
+                            </div>
+                            <div class="proven-text">
+                                <span class="proven-stat" data-i18n="proven_stat2_title">6+ Years</span>
+                                <span class="proven-sub" data-i18n="proven_stat2_sub">Coaching Experience</span>
+                            </div>
+                        </div>
+                        <div class="proven-divider"></div>
+                        <div class="proven-item">
+                            <div class="proven-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                                    <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                                </svg>
+                            </div>
+                            <div class="proven-text">
+                                <span class="proven-stat" data-i18n="proven_stat3_title">Athletes</span>
+                                <span class="proven-sub" data-i18n="proven_stat3_sub">Worldwide</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-i18n="stat2_num">120+</span>
-                        <span class="stat-label" data-i18n="stat2_label">Ironman Completed</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- TRIATHLON JOURNEY -->
+        <div class="journey-section">
+            <h3 class="journey-title" data-i18n="journey_title">The Triathlon Journey</h3>
+            <div class="journey-grid">
+                <!-- Columna 1 (~1142px): 13, 7, 11 -->
+                <div class="journey-col">
+                    <div class="journey-item" onclick="openLightbox('/assets/journey-13.webp','Ironman 70.3 Barcelona — finisher medal')">
+                        <picture><source srcset="/assets/journey-13.webp" type="image/webp">
+                        <img src="/assets/13.jpg" alt="Ironman 70.3 Barcelona — finisher medal" loading="lazy"></picture>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-i18n="stat3_num">15+</span>
-                        <span class="stat-label" data-i18n="stat3_label">Podiums with My Athletes</span>
+                    <div class="journey-item" onclick="openLightbox('/assets/journey-7.webp','Running — Doha skyline')">
+                        <picture><source srcset="/assets/journey-7.webp" type="image/webp">
+                        <img src="/assets/7.JPG" alt="Running — Doha skyline" loading="lazy"></picture>
+                    </div>
+                    <div class="journey-item" onclick="openLightbox('/assets/journey-11.webp','Cycling — road training')">
+                        <picture><source srcset="/assets/journey-11.webp" type="image/webp">
+                        <img src="/assets/11.JPG" alt="Cycling — road training" loading="lazy"></picture>
+                    </div>
+                </div>
+                <!-- Columna 2 (~1225px): 4, 8, 6 -->
+                <div class="journey-col">
+                    <div class="journey-item" onclick="openLightbox('/assets/journey-4.webp','Running — Ironman 70.3 Cartagena')">
+                        <picture><source srcset="/assets/journey-4.webp" type="image/webp">
+                        <img src="/assets/4.JPG" alt="Running — Ironman 70.3 Cartagena" loading="lazy"></picture>
+                    </div>
+                    <div class="journey-item" onclick="openLightbox('/assets/journey-8.webp','Running — race Doha')">
+                        <picture><source srcset="/assets/journey-8.webp" type="image/webp">
+                        <img src="/assets/8.JPG" alt="Running — race Doha" loading="lazy"></picture>
+                    </div>
+                    <div class="journey-item" onclick="openLightbox('/assets/journey-6.webp','Beach triathlon — green suit')">
+                        <picture><source srcset="/assets/journey-6.webp" type="image/webp">
+                        <img src="/assets/6.JPG" alt="Beach triathlon — green suit" loading="lazy"></picture>
+                    </div>
+                </div>
+                <!-- Columna 3 (~1167px): 9, 12, 1 -->
+                <div class="journey-col">
+                    <div class="journey-item" onclick="openLightbox('/assets/journey-9.webp','Swimming — open water')">
+                        <picture><source srcset="/assets/journey-9.webp" type="image/webp">
+                        <img src="/assets/9.JPG" alt="Swimming — open water" loading="lazy"></picture>
+                    </div>
+                    <div class="journey-item" onclick="openLightbox('/assets/journey-12.webp','Cycling — TT position')">
+                        <picture><source srcset="/assets/journey-12.webp" type="image/webp">
+                        <img src="/assets/12.JPG" alt="Cycling — TT position" loading="lazy"></picture>
+                    </div>
+                    <div class="journey-item" onclick="openLightbox('/assets/journey-1.webp','Preparing — race day')">
+                        <picture><source srcset="/assets/journey-1.webp" type="image/webp">
+                        <img src="/assets/1.jpeg" alt="Preparing — race day" loading="lazy"></picture>
+                    </div>
+                </div>
+                <!-- Columna 4 (~1346px): 10, 2, 3, 5 -->
+                <div class="journey-col">
+                    <div class="journey-item" onclick="openLightbox('/assets/journey-10.webp','Cycling — race pace')">
+                        <picture><source srcset="/assets/journey-10.webp" type="image/webp">
+                        <img src="/assets/10.JPG" alt="Cycling — race pace" loading="lazy"></picture>
+                    </div>
+                    <div class="journey-item" onclick="openLightbox('/assets/journey-2.webp','Running — waterfront promenade')">
+                        <picture><source srcset="/assets/journey-2.webp" type="image/webp">
+                        <img src="/assets/2.jpeg" alt="Running — waterfront promenade" loading="lazy"></picture>
+                    </div>
+                    <div class="journey-item" onclick="openLightbox('/assets/journey-5.webp','Beach triathlon — green suit')">
+                        <picture><source srcset="/assets/journey-5.webp" type="image/webp">
+                        <img src="/assets/5.JPG" alt="Beach triathlon — green suit" loading="lazy"></picture>
                     </div>
                 </div>
             </div>
@@ -242,6 +334,12 @@ import TestimonialModal from '../components/TestimonialModal.astro';
 
 </main>
 
+<!-- LIGHTBOX -->
+<div id="journey-lightbox" onclick="closeLightbox()">
+    <button id="lightbox-close" onclick="closeLightbox()" aria-label="Close">×</button>
+    <img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()">
+</div>
+
 <Footer />
 <TestimonialModal />
 
@@ -256,14 +354,17 @@ const T = {
         hero_description:'Ironman certified coach with over 6 years of experience. Specialist in complete triathlon preparation (Sprint, Olympic, 70.3 & Full Ironman) and solo running programs from 5K to marathon. Personalized training to take you to your next finish line.',
         btn_programs:'View Training Programs', btn_start:'Start Your Training',
         about_tag:'Meet Me', about_title:'About Me',
-        about_subtitle:'Your IRONMAN certified coach on the road to the finish line',
-        about_h3:'Training Champions Since 2018',
-        about_p1:'I am Katherine Gomez Aya, Ironman Certified Coach and triathlon training specialist. With over 6 years of experience preparing athletes of all levels, from beginners to Ironman competitors, my passion is helping you cross that finish line.',
-        about_p2:'My approach combines sports training science with the mindset of a champion. I design personalized plans that integrate swimming, cycling, and athletics, optimizing each session to maximize your performance and minimize injury risk.',
-        about_p3:'My mission is simple but powerful: to guide you to conquer your athletic goals, whether completing your first sprint triathlon or achieving a podium in an Ironman 140.6.',
-        stat1_num:'500+', stat1_label:'Athletes Trained',
-        stat2_num:'120+', stat2_label:'Ironman Completed',
-        stat3_num:'15+',  stat3_label:'Podiums with My Athletes',
+        about_subtitle:'Your IRONMAN Certified Coach on the Road to the Finish Line',
+        about_h3:'Training Champions Since 2021',
+        about_p1:"I'm Katherine Gomez Aya, IRONMAN Certified Coach and triathlon specialist — 16 years as both athlete and coach, having lived every stage of the journey: the early mornings, long training sessions, mental battles, and the satisfaction of crossing the finish line.",
+        about_p2:'Since 2021, I coach athletes of all levels, from first-timers to competitors targeting IRONMAN 70.3 and 140.6. Every plan is fully personalized — blending sports science, structured methodology, and a champion\'s mindset across swimming, cycling, and running to maximize performance and minimize injury risk.',
+        about_p3:'My mission: guide you step by step toward your goals — your first Sprint Triathlon, a 70.3, or the podium at a full IRONMAN 140.6.',
+        about_p4:'Because every finish line starts with a decision to begin.',
+        proven_title:'Proven Results',
+        proven_stat1_title:'Ironman 70.3 · Full Ironman', proven_stat1_sub:'Finisher',
+        proven_stat2_title:'5+ Years',     proven_stat2_sub:'Coaching Experience',
+        proven_stat3_title:'Athletes',     proven_stat3_sub:'Worldwide',
+        journey_title:'The Triathlon Journey',
         services_tag:'Programs', services_title:'Training',
         services_subtitle:'Sprint · Olympic · Ironman 70.3 · Running · Full Ironman',
         svc1_title:'Sprint & Olympic Triathlon', svc1_desc:'Complete 3-discipline plan. Progressive training for your first triathlon or to improve your time. Includes T1 and T2 transition strategies.', svc1_price:'$70/month',
@@ -289,7 +390,7 @@ const T = {
         form_message_label:'Your Message', form_message_placeholder:'Tell me about your current level, your goal and any previous injuries...',
         btn_submit:'Request Free Assessment',
         form_success:'Thank you for your message! I will contact you soon to schedule your initial assessment.',
-        footer_copyright:'© 2025 Kat3athlete. All rights reserved.',
+        footer_copyright:'© 2026 Kat3athlete. All rights reserved.',
         footer_tagline:'Ironman Certified Coach | Triathlon · Running',
         modal_title:'Add Your Testimonial', modal_name_label:'Full Name', modal_name_placeholder:'Your name',
         modal_email_label:'Email', modal_email_placeholder:'your@email.com',
@@ -306,13 +407,16 @@ const T = {
         btn_programs:'Ver Programas de Entrenamiento', btn_start:'Inicia Tu Entrenamiento',
         about_tag:'Conóceme', about_title:'Sobre Mí',
         about_subtitle:'Tu coach certificada IRONMAN en el camino hacia la línea de meta',
-        about_h3:'Entrenando Campeones Desde el 2018',
-        about_p1:'Soy Katherine Gomez Aya, Ironman Certified Coach y especialista en entrenamiento de triatlón. Con más de 6 años de experiencia preparando atletas de todos los niveles, desde principiantes hasta competidores de Ironman, mi pasión es ayudarte a cruzar esa línea de meta.',
-        about_p2:'Mi enfoque combina la ciencia del entrenamiento deportivo con la mentalidad de un campeón. Diseño planes personalizados que integran natación, ciclismo y atletismo, optimizando cada sesión para maximizar tu rendimiento y minimizar el riesgo de lesiones.',
-        about_p3:'Mi misión es simple pero poderosa: guiarte para que conquistes tus metas atléticas, ya sea completar tu primer triatlón sprint o lograr un podium en un Ironman 140.6.',
-        stat1_num:'500+', stat1_label:'Atletas Entrenados',
-        stat2_num:'120+', stat2_label:'Ironman Completados',
-        stat3_num:'15+',  stat3_label:'Podiums con Mis Atletas',
+        about_h3:'Entrenando Campeones Desde 2021',
+        about_p1:'Soy Katherine Gomez Aya, Coach Certificada IRONMAN y especialista en triatlón — 16 años como atleta y entrenadora, habiendo vivido cada etapa del camino: los madrugones, las largas sesiones, las batallas mentales y la satisfacción de cruzar la línea de meta.',
+        about_p2:'Desde 2021, entreno atletas de todos los niveles, desde principiantes hasta competidores de IRONMAN 70.3 y 140.6. Cada plan es completamente personalizado — combinando ciencia del deporte, metodología estructurada y mentalidad de campeón en natación, ciclismo y carrera para maximizar el rendimiento y minimizar lesiones.',
+        about_p3:'Mi misión: guiarte paso a paso hacia tus metas — tu primer Triatlón Sprint, un 70.3 o el podio de un IRONMAN 140.6 completo.',
+        about_p4:'Porque cada línea de meta comienza con la decisión de empezar.',
+        proven_title:'Resultados Comprobados',
+        proven_stat1_title:'Ironman 70.3 · Full Ironman', proven_stat1_sub:'Finisher',
+        proven_stat2_title:'5+ Años',      proven_stat2_sub:'Experiencia en Coaching',
+        proven_stat3_title:'Atletas',      proven_stat3_sub:'En Todo el Mundo',
+        journey_title:'El Viaje del Triatlón',
         services_tag:'Programas', services_title:'Entrenamiento',
         services_subtitle:'Sprint · Olímpico · Ironman 70.3 · Running · Full Ironman',
         svc1_title:'Triatlón Sprint & Olímpico', svc1_desc:'Plan completo de 3 disciplinas. Entrenamiento progresivo para tu primer triatlón o para mejorar tu marca. Incluye estrategias de transición T1 y T2.', svc1_price:'$70/mes',
@@ -338,7 +442,7 @@ const T = {
         form_message_label:'Tu Mensaje', form_message_placeholder:'Cuéntame sobre tu nivel actual, tu objetivo y cualquier lesión previa...',
         btn_submit:'Solicitar Evaluación Gratuita',
         form_success:'¡Gracias por tu mensaje! Te contactaré pronto para agendar tu evaluación inicial.',
-        footer_copyright:'© 2025 Kat3athlete. Todos los derechos reservados.',
+        footer_copyright:'© 2026 Kat3athlete. Todos los derechos reservados.',
         footer_tagline:'Ironman Certified Coach | Triatlón · Running',
         modal_title:'Agregar Tu Testimonio', modal_name_label:'Nombre Completo', modal_name_placeholder:'Tu nombre',
         modal_email_label:'Correo Electrónico', modal_email_placeholder:'tu@correo.com',
@@ -355,13 +459,16 @@ const T = {
         btn_programs:"Vedi i Programmi di Allenamento", btn_start:'Inizia il Tuo Allenamento',
         about_tag:'Scoprimi', about_title:'Chi Sono',
         about_subtitle:"La tua coach certificata IRONMAN sulla strada verso il traguardo",
-        about_h3:'Formo Campioni dal 2018',
-        about_p1:"Sono Katherine Gomez Aya, Coach Certificata Ironman e specialista in allenamento per il triathlon. Con oltre 6 anni di esperienza nella preparazione di atleti di tutti i livelli, dai principianti ai concorrenti Ironman, la mia passione è aiutarti a tagliare quel traguardo.",
-        about_p2:"Il mio approccio combina la scienza dell'allenamento sportivo con la mentalità di un campione. Progetto piani personalizzati che integrano nuoto, ciclismo e atletica, ottimizzando ogni sessione per massimizzare le tue prestazioni e ridurre al minimo il rischio di infortuni.",
-        about_p3:"La mia missione è semplice ma potente: guidarti a conquistare i tuoi obiettivi atletici, che si tratti di completare il tuo primo triathlon sprint o raggiungere il podio in un Ironman 140.6.",
-        stat1_num:'500+', stat1_label:'Atleti Allenati',
-        stat2_num:'120+', stat2_label:'Ironman Completati',
-        stat3_num:'15+',  stat3_label:'Podi con i Miei Atleti',
+        about_h3:'Formo Campioni dal 2021',
+        about_p1:"Sono Katherine Gomez Aya, Coach Certificata IRONMAN e specialista di triathlon — 16 anni come atleta e coach, avendo vissuto ogni fase del percorso: le mattine presto, le lunghe sessioni, le battaglie mentali e la soddisfazione di tagliare il traguardo.",
+        about_p2:"Dal 2021, alleno atleti di tutti i livelli, dai principianti ai concorrenti IRONMAN 70.3 e 140.6. Ogni piano è completamente personalizzato — fondendo scienza dello sport, metodologia strutturata e mentalità da campione nel nuoto, ciclismo e corsa per massimizzare le prestazioni e ridurre il rischio di infortuni.",
+        about_p3:"La mia missione: guidarti passo dopo passo verso i tuoi obiettivi — il tuo primo Triathlon Sprint, un 70.3 o il podio di un IRONMAN 140.6 completo.",
+        about_p4:"Perché ogni traguardo inizia con la decisione di cominciare.",
+        proven_title:'Risultati Comprovati',
+        proven_stat1_title:'Ironman 70.3 · Full Ironman', proven_stat1_sub:'Finisher',
+        proven_stat2_title:'5+ Anni',      proven_stat2_sub:'Esperienza nel Coaching',
+        proven_stat3_title:'Atleti',       proven_stat3_sub:'In Tutto il Mondo',
+        journey_title:'Il Viaggio del Triathlon',
         services_tag:'Programmi', services_title:'Allenamento',
         services_subtitle:'Sprint · Olimpico · Ironman 70.3 · Running · Full Ironman',
         svc1_title:'Triathlon Sprint & Olimpico', svc1_desc:'Piano completo a 3 discipline. Allenamento progressivo per il primo triathlon o per migliorare il tempo. Include strategie di transizione T1 e T2.', svc1_price:'$70/mese',
@@ -387,7 +494,7 @@ const T = {
         form_message_label:'Il Tuo Messaggio', form_message_placeholder:"Parlami del tuo livello attuale, del tuo obiettivo e di eventuali infortuni precedenti...",
         btn_submit:'Richiedi una Valutazione Gratuita',
         form_success:'Grazie per il tuo messaggio! Ti contatterò presto per programmare la tua valutazione iniziale.',
-        footer_copyright:'© 2025 Kat3athlete. Tutti i diritti riservati.',
+        footer_copyright:'© 2026 Kat3athlete. Tutti i diritti riservati.',
         footer_tagline:'Coach Certificata Ironman | Triathlon · Running',
         modal_title:'Aggiungi la Tua Testimonianza', modal_name_label:'Nome Completo', modal_name_placeholder:'Il tuo nome',
         modal_email_label:'Email', modal_email_placeholder:'tua@email.com',
@@ -404,13 +511,16 @@ const T = {
         btn_programs:"Ver Programas de Treinamento", btn_start:'Inicie Seu Treinamento',
         about_tag:'Conheça-me', about_title:'Sobre Mim',
         about_subtitle:"Sua coach certificada IRONMAN no caminho até a linha de chegada",
-        about_h3:'Formando Campeões Desde 2018',
-        about_p1:"Sou Katherine Gomez Aya, Coach Certificada Ironman e especialista em treinamento de triathlon. Com mais de 6 anos de experiência preparando atletas de todos os níveis, de iniciantes a competidores Ironman, minha paixão é ajudá-lo a cruzar aquela linha de chegada.",
-        about_p2:"Minha abordagem combina a ciência do treinamento esportivo com a mentalidade de um campeão. Desenvolvo planos personalizados que integram natação, ciclismo e atletismo, otimizando cada sessão para maximizar seu desempenho e minimizar o risco de lesões.",
-        about_p3:"Minha missão é simples, mas poderosa: guiá-lo para conquistar suas metas atléticas, seja completar seu primeiro triathlon sprint ou alcançar o pódio em um Ironman 140.6.",
-        stat1_num:'500+', stat1_label:'Atletas Treinados',
-        stat2_num:'120+', stat2_label:'Ironman Completados',
-        stat3_num:'15+',  stat3_label:'Pódios com Meus Atletas',
+        about_h3:'Formando Campeões Desde 2021',
+        about_p1:"Sou Katherine Gomez Aya, Coach Certificada IRONMAN e especialista em triathlon — 16 anos como atleta e treinadora, tendo vivido cada etapa da jornada: os treinos matinais, as longas sessões, as batalhas mentais e a satisfação de cruzar a linha de chegada.",
+        about_p2:"Desde 2021, treino atletas de todos os níveis, desde iniciantes até competidores mirando IRONMAN 70.3 e 140.6. Cada plano é totalmente personalizado — combinando ciência esportiva, metodologia estruturada e mentalidade de campeão em natação, ciclismo e corrida para maximizar o desempenho e minimizar lesões.",
+        about_p3:"Minha missão: guiá-lo passo a passo em direção aos seus objetivos — seu primeiro Triathlon Sprint, um 70.3 ou o pódio de um IRONMAN 140.6 completo.",
+        about_p4:"Porque cada linha de chegada começa com a decisão de começar.",
+        proven_title:'Resultados Comprovados',
+        proven_stat1_title:'Ironman 70.3 · Full Ironman', proven_stat1_sub:'Finisher',
+        proven_stat2_title:'5+ Anos',      proven_stat2_sub:'Experiência em Coaching',
+        proven_stat3_title:'Atletas',      proven_stat3_sub:'Em Todo o Mundo',
+        journey_title:'A Jornada do Triathlon',
         services_tag:'Programas', services_title:'Treinamento',
         services_subtitle:'Sprint · Olímpico · Ironman 70.3 · Running · Full Ironman',
         svc1_title:'Triathlon Sprint & Olímpico', svc1_desc:'Plano completo de 3 disciplinas. Treinamento progressivo para seu primeiro triathlon ou para melhorar seu tempo. Inclui estratégias de transição T1 e T2.', svc1_price:'$70/mês',
@@ -436,7 +546,7 @@ const T = {
         form_message_label:'Sua Mensagem', form_message_placeholder:"Conte-me sobre seu nível atual, seu objetivo e quaisquer lesões anteriores...",
         btn_submit:'Solicitar Avaliação Gratuita',
         form_success:'Obrigado pela sua mensagem! Entrarei em contato em breve para agendar sua avaliação inicial.',
-        footer_copyright:'© 2025 Kat3athlete. Todos os direitos reservados.',
+        footer_copyright:'© 2026 Kat3athlete. Todos os direitos reservados.',
         footer_tagline:'Coach Certificada Ironman | Triathlon · Running',
         modal_title:'Adicionar Depoimento', modal_name_label:'Nome Completo', modal_name_placeholder:'Seu nome',
         modal_email_label:'Email', modal_email_placeholder:'seu@email.com',
@@ -474,7 +584,10 @@ function setLang(lang) {
 function showSection(sectionId) {
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
     const target = document.getElementById(sectionId);
-    if (target) { target.classList.add('active'); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    if (target) {
+        target.classList.add('active');
+        requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    }
     document.querySelectorAll('.nav-link').forEach(link => {
         link.classList.toggle('active', link.getAttribute('data-section') === sectionId);
     });
@@ -604,6 +717,20 @@ function closeMenu() {
     toggle.setAttribute('aria-expanded', 'false');
 }
 
+/* ─── LIGHTBOX ─── */
+function openLightbox(src, alt) {
+    const lb = document.getElementById('journey-lightbox');
+    const img = document.getElementById('lightbox-img');
+    img.src = src;
+    img.alt = alt || '';
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+    document.getElementById('journey-lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+}
+
 /* ─── INIT ─── */
 document.addEventListener('DOMContentLoaded', () => {
     setLang('en');
@@ -612,6 +739,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.nav-link').forEach(btn => {
         btn.addEventListener('click', closeMenu);
     });
+
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 
     document.addEventListener('click', (e) => {
         const menu = document.getElementById('mobile-menu');

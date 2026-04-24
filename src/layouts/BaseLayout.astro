@@ -2,8 +2,12 @@
 import '../styles/global.css';
 export interface Props {
   title?: string;
+  description?: string;
 }
-const { title = 'Kat3athlete | Ironman Certified Coach' } = Astro.props;
+const {
+  title = 'Kat3athlete | Ironman Certified Coach',
+  description = 'Katherine Gomez Aya — Ironman Certified Coach with 6+ years of experience. Personalized triathlon and running training: Sprint, Olympic, Ironman 70.3 & 140.6. Train online from anywhere.'
+} = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +16,7 @@ const { title = 'Kat3athlete | Ironman Certified Coach' } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="color-scheme" content="dark">
     <meta name="theme-color" content="#000000">
+    <meta name="description" content={description}>
     <title>{title}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
