@@ -309,6 +309,79 @@ button, input, textarea, select {
     letter-spacing: var(--tracking-lg); color: rgba(255,255,255,0.7);
 }
 
+/* ABOUT — PROVEN RESULTS */
+.about-grid--solo { grid-template-columns: 1fr; }
+
+.proven-results { margin-top: 40px; }
+.proven-title {
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-xl);
+    color: var(--iron-red);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.proven-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+    padding: 28px 20px;
+    overflow: hidden;
+}
+.proven-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+    justify-content: center;
+    min-width: 0;
+}
+.proven-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    color: var(--iron-red);
+}
+.proven-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.proven-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+}
+.proven-stat {
+    font-family: var(--font-display);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    color: var(--iron-white);
+    letter-spacing: var(--tracking-sm);
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+.proven-sub {
+    font-size: var(--text-xs);
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-md);
+}
+.proven-divider {
+    width: 1px;
+    height: 50px;
+    background: rgba(255,255,255,0.12);
+    flex-shrink: 0;
+    margin: 0 8px;
+}
+
 /* TRIATHLON JOURNEY */
 .journey-section { margin-top: 64px; }
 .journey-title {
@@ -682,6 +755,9 @@ button, input, textarea, select {
     .modal { padding: 28px 16px; }
     .container { padding: 30px 16px; }
     .footer { padding: 14px 16px; }
+    .proven-grid { flex-direction: column; gap: 16px; padding: 20px 16px; }
+    .proven-divider { width: 100%; height: 1px; margin: 0; }
+    .proven-item { justify-content: flex-start; }
 }
 
 /* RESPONSIVE — SMALL MOBILE */
