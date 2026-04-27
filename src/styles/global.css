@@ -528,6 +528,10 @@ button, input, textarea, select {
     margin: 0 auto 20px;
     object-fit: contain;
 }
+.service-icon-img--ironman {
+    height: 180px;
+    max-width: 280px;
+}
 .service-card h3 {
     font-family: var(--font-display); font-size: var(--text-2xl);
     font-weight: var(--weight-semibold); margin-bottom: 15px; text-transform: uppercase;
