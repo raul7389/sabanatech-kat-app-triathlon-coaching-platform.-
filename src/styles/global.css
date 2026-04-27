@@ -529,8 +529,8 @@ button, input, textarea, select {
     object-fit: contain;
 }
 .service-icon-img--ironman {
-    height: 180px;
-    max-width: 280px;
+    height: 130px;
+    max-width: 200px;
 }
 .service-icon-img--ironman140 {
     height: auto;
