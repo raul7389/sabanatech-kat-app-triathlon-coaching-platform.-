@@ -19,6 +19,7 @@ import TestimonialModal from '../components/TestimonialModal.astro';
                 Kat3
                 <span class="highlight">athlete</span>
             </h1>
+            <div class="hero-divider"></div>
             <p class="hero-subtitle" data-i18n="hero_subtitle">Complete Triathlon Training</p>
             <p class="hero-description" data-i18n="hero_description">Professional coach certified by IRONMAN with over 6 years of experience training athletes of all levels. Specialist in preparation for sprint, Olympic, 70.3 and Full Ironman triathlons. Transform your performance with comprehensive training designed to push your limits.</p>
             <div class="btn-group">
@@ -299,15 +300,6 @@ import TestimonialModal from '../components/TestimonialModal.astro';
                         <p id="contact-location-text">Doha, Qatar</p>
                     </div>
                 </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12,6 12,12 16,14"/></svg>
-                    </div>
-                    <div>
-                        <h4 data-i18n="contact_hours_label">Training Hours</h4>
-                        <p id="contact-hours-text">Monday to Friday: 5:30 - 9:00 &amp; 17:00 - 21:00<br>Saturdays: 6:00 - 12:00</p>
-                    </div>
-                </div>
             </div>
             <div class="contact-form">
                 <form id="contact-form" onsubmit="handleFormSubmit(event)">
@@ -388,8 +380,6 @@ const T = {
         contact_email_label:'Email', contact_phone_label:'Phone / WhatsApp',
         contact_location_label:'Location',
         contact_location_text:'Doha, Qatar',
-        contact_hours_label:'Training Hours',
-        contact_hours_text:'Monday to Friday: 5:30 - 9:00 & 17:00 - 21:00<br>Saturdays: 6:00 - 12:00',
         form_name_label:'Full Name', form_name_placeholder:'Your name',
         form_email_label:'Email Address', form_email_placeholder:'your@email.com',
         form_phone_label:'Phone', form_phone_placeholder:'+974 33 106 749',
@@ -440,8 +430,6 @@ const T = {
         contact_email_label:'Email', contact_phone_label:'Teléfono / WhatsApp',
         contact_location_label:'Ubicación',
         contact_location_text:'Doha, Qatar',
-        contact_hours_label:'Horario de Entrenamiento',
-        contact_hours_text:'Lunes a Viernes: 5:30 - 9:00 & 17:00 - 21:00<br>Sábados: 6:00 - 12:00',
         form_name_label:'Nombre Completo', form_name_placeholder:'Tu nombre',
         form_email_label:'Correo Electrónico', form_email_placeholder:'tu@email.com',
         form_phone_label:'Teléfono', form_phone_placeholder:'+974 33 106 749',
@@ -492,8 +480,6 @@ const T = {
         contact_email_label:'Email', contact_phone_label:'Telefono / WhatsApp',
         contact_location_label:'Posizione',
         contact_location_text:'Doha, Qatar',
-        contact_hours_label:"Orari di Allenamento",
-        contact_hours_text:"Lunedì-Venerdì: 5:30 - 9:00 & 17:00 - 21:00<br>Sabato: 6:00 - 12:00",
         form_name_label:'Nome Completo', form_name_placeholder:'Il tuo nome',
         form_email_label:'Indirizzo Email', form_email_placeholder:'tua@email.com',
         form_phone_label:'Telefono', form_phone_placeholder:'+974 33 106 749',
@@ -544,8 +530,6 @@ const T = {
         contact_email_label:'Email', contact_phone_label:'Telefone / WhatsApp',
         contact_location_label:'Localização',
         contact_location_text:'Doha, Qatar',
-        contact_hours_label:"Horários de Treinamento",
-        contact_hours_text:"Segunda a Sexta: 5:30 - 9:00 & 17:00 - 21:00<br>Sábados: 6:00 - 12:00",
         form_name_label:'Nome Completo', form_name_placeholder:'Seu nome',
         form_email_label:'Endereço de Email', form_email_placeholder:'seu@email.com',
         form_phone_label:'Telefone', form_phone_placeholder:'+974 33 106 749',
@@ -583,8 +567,6 @@ function setLang(lang) {
     });
     const locEl = document.getElementById('contact-location-text');
     if (locEl && t.contact_location_text) locEl.innerHTML = t.contact_location_text;
-    const hrEl = document.getElementById('contact-hours-text');
-    if (hrEl && t.contact_hours_text) hrEl.innerHTML = t.contact_hours_text;
 }
 
 /* ─── NAVIGATION ─── */
