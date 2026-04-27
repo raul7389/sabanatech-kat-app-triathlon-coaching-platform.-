@@ -262,7 +262,6 @@ button, input, textarea, select {
 
 /* ABOUT */
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.about-grid--solo { grid-template-columns: 1fr; max-width: 800px; margin: 0 auto; }
 .about-image {
     position: relative;
     border: 4px solid var(--iron-red);
@@ -280,79 +279,31 @@ button, input, textarea, select {
 .about-content h3 {
     font-family: var(--font-display); font-size: var(--text-4xl);
     font-weight: var(--weight-semibold); margin-bottom: 20px; text-transform: uppercase;
+    text-align: center;
 }
 .about-content p {
     font-size: var(--text-lg); color: rgba(255,255,255,0.8);
     margin-bottom: 20px; line-height: var(--leading-loose);
-    text-align: justify;
 }
-/* PROVEN RESULTS BANNER */
-.proven-results {
-    margin-top: 40px;
-    background: linear-gradient(135deg, #1c0005 0%, #2e0008 55%, #1c0005 100%);
-    border: 1px solid rgba(228,0,43,0.25);
-    border-radius: 6px;
-    padding: 28px 32px;
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
+.stat-item {
+    text-align: center; padding: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.03);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
 }
-.proven-title {
-    font-family: var(--font-display);
-    font-size: var(--text-xl);
-    font-weight: var(--weight-bold);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--iron-white);
-    margin-bottom: 22px;
-    text-align: center;
+.stat-item:hover {
+    border-color: rgba(228,0,43,0.4);
+    background: rgba(228,0,43,0.08);
+    transform: translateY(-4px);
 }
-.proven-grid {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+.stat-number {
+    font-family: var(--font-display); font-size: var(--text-stat);
+    font-weight: var(--weight-bold); color: var(--iron-red); display: block;
 }
-.proven-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    flex: 1;
-    padding: 0 24px;
-}
-.proven-item:first-child { padding-left: 0; }
-.proven-divider {
-    width: 1px;
-    align-self: stretch;
-    min-height: 48px;
-    background: rgba(228,0,43,0.45);
-    flex-shrink: 0;
-}
-.proven-icon {
-    color: var(--iron-red);
-    flex-shrink: 0;
-    padding-top: 3px;
-}
-.proven-icon svg { width: 38px; height: 38px; }
-.proven-text { display: flex; flex-direction: column; gap: 3px; }
-.proven-stat {
-    font-family: var(--font-display);
-    font-size: var(--text-base);
-    font-weight: var(--weight-bold);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--iron-white);
-}
-.proven-sub {
-    font-size: var(--text-sm);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: rgba(255,255,255,0.55);
-}
-@media (max-width: 600px) {
-    .proven-results { padding: 20px 16px; }
-    .proven-grid { flex-direction: column; gap: 16px; align-items: flex-start; }
-    .proven-divider { width: 100%; height: 1px; }
-    .proven-item { padding: 0; }
-}
-
-/* (legacy stat classes — unused, kept for safety) */
 .stat-label {
     font-size: var(--text-sm); text-transform: uppercase;
     letter-spacing: var(--tracking-lg); color: rgba(255,255,255,0.7);
