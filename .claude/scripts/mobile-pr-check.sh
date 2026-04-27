@@ -95,7 +95,8 @@ fi
 # --- 7. Crear PR ---
 MOBILE_NOTE=""
 if [ ${#WARNINGS[@]} -gt 0 ]; then
-  MOBILE_NOTE=$(printf '\n\n### ⚠ Advertencias Mobile\n'; printf '- %s\n' "${WARNINGS[@]}")
+  MOBILE_NOTE=$'\n\n### ⚠ Advertencias Mobile\n'
+  for w in "${WARNINGS[@]}"; do MOBILE_NOTE+="- $w"$'\n'; done
 fi
 
 echo ""
