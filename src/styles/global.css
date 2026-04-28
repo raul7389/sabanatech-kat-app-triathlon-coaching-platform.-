@@ -599,6 +599,7 @@ button, input, textarea, select {
     justify-content: center;
     width: 100%;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 .service-icon {
     width: 48px; height: 48px;
@@ -629,7 +630,11 @@ button, input, textarea, select {
     filter: brightness(0) saturate(100%) invert(14%) sepia(97%) saturate(3571%) hue-rotate(339deg) brightness(97%) contrast(105%);
 }
 .service-icon-img--running {
-    height: 315px;
+    height: 130px;
+    width: auto;
+    max-width: none;
+    transform: scale(1.7);
+    transform-origin: center center;
     filter: brightness(0) saturate(100%) invert(14%) sepia(97%) saturate(3571%) hue-rotate(339deg) brightness(97%) contrast(105%);
 }
 .service-card h3 {
@@ -672,9 +677,9 @@ button, input, textarea, select {
 }
 .testimonial-text {
     font-size: var(--text-lg); line-height: var(--leading-loose);
-    margin-bottom: 30px; color: rgba(255,255,255,0.9);
+    margin-top: 24px; color: rgba(255,255,255,0.9);
 }
-.testimonial-author { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; margin-top: auto; padding-top: 20px; }
+.testimonial-author { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; padding-bottom: 4px; }
 .testimonial-avatar {
     width: 60px; height: 60px; border-radius: 50%;
     background: var(--iron-red); display: flex; align-items: center;
