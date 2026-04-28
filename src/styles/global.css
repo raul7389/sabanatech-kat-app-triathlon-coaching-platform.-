@@ -621,6 +621,15 @@ button, input, textarea, select {
     width: 210px;
     max-width: 100%;
 }
+.service-icon-img--triathlon {
+    height: auto;
+    width: 240px;
+    max-width: 100%;
+    filter: hue-rotate(-8deg) brightness(0.89) saturate(1.1);
+}
+.service-icon-img--running {
+    height: 190px;
+}
 .service-card h3 {
     font-family: var(--font-display); font-size: var(--text-2xl);
     font-weight: var(--weight-semibold); margin-bottom: 15px; text-transform: uppercase;
