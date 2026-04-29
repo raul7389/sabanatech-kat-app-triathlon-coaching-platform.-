@@ -599,6 +599,7 @@ button, input, textarea, select {
     justify-content: center;
     width: 100%;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 .service-icon {
     width: 48px; height: 48px;
@@ -613,8 +614,9 @@ button, input, textarea, select {
     object-fit: contain;
 }
 .service-icon-img--ironman {
-    height: 130px;
+    height: 95px;
     max-width: 200px;
+    filter: brightness(0) saturate(100%) invert(14%) sepia(97%) saturate(3571%) hue-rotate(339deg) brightness(97%) contrast(105%);
 }
 .service-icon-img--ironman140 {
     height: auto;
@@ -625,10 +627,15 @@ button, input, textarea, select {
     height: auto;
     width: 240px;
     max-width: 100%;
-    filter: hue-rotate(-8deg) brightness(0.89) saturate(1.1);
+    filter: brightness(0) saturate(100%) invert(14%) sepia(97%) saturate(3571%) hue-rotate(339deg) brightness(97%) contrast(105%);
 }
 .service-icon-img--running {
-    height: 190px;
+    height: 130px;
+    width: auto;
+    max-width: none;
+    transform: scale(1.7);
+    transform-origin: center center;
+    filter: brightness(0) saturate(100%) invert(14%) sepia(97%) saturate(3571%) hue-rotate(339deg) brightness(97%) contrast(105%);
 }
 .service-card h3 {
     font-family: var(--font-display); font-size: var(--text-2xl);
@@ -670,9 +677,9 @@ button, input, textarea, select {
 }
 .testimonial-text {
     font-size: var(--text-lg); line-height: var(--leading-loose);
-    margin-bottom: 30px; color: rgba(255,255,255,0.9);
+    margin-top: 24px; color: rgba(255,255,255,0.9);
 }
-.testimonial-author { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; margin-top: auto; padding-top: 20px; }
+.testimonial-author { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; padding-bottom: 4px; }
 .testimonial-avatar {
     width: 60px; height: 60px; border-radius: 50%;
     background: var(--iron-red); display: flex; align-items: center;
