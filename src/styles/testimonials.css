@@ -27,7 +27,6 @@
     scroll-snap-align: start;
 }
 .testimonial-card:hover {
-    transform: translateY(-4px);
     box-shadow: 0 16px 40px rgba(228,0,43,0.1);
 }
 .testimonial-card::before {

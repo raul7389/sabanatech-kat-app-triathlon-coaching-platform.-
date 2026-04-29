@@ -24,22 +24,39 @@
         background: rgba(0,0,0,0.98);
         -webkit-backdrop-filter: blur(12px);
         backdrop-filter: blur(12px);
-        border-bottom: 3px solid var(--iron-red);
+        border-bottom: none;
+        background-image: linear-gradient(to right, transparent, var(--iron-red) 30%, var(--iron-red) 70%, transparent);
+        background-size: 100% 2px;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        box-shadow: 0 2px 20px rgba(228,0,43,0.25);
         z-index: 998; padding-bottom: 16px;
     }
     .mobile-menu.open { display: flex; }
     .nav { flex-direction: column; gap: 0; flex-wrap: nowrap; width: 100%; }
     .nav-link {
         font-size: var(--text-base); padding: 16px 20px;
-        border: none; border-bottom: 1px solid rgba(255,255,255,0.06);
+        border-bottom: 1px solid rgba(255,255,255,0.06);
         text-align: center; width: 100%;
         letter-spacing: var(--tracking-lg);
     }
+    .nav-link::after { display: none; }
     .nav-link:last-child { border-bottom: none; }
     .nav-link:hover, .nav-link.active {
-        background: rgba(228,0,43,0.1); color: var(--iron-white); border-color: transparent;
+        background: rgba(228,0,43,0.1); color: var(--iron-white);
     }
     .lang-switcher { margin: 12px auto 0; border-color: rgba(255,255,255,0.2); }
+    /* Testimonials carousel mobile */
+    .testimonials-grid { gap: 16px; padding-left: 4px; padding-right: 4px; }
+    .testimonial-card {
+        min-width: calc(100vw - 48px);
+        max-width: calc(100vw - 48px);
+        padding: 28px 24px;
+    }
+    .testimonial-card::before { font-size: 4rem; top: -12px; left: 14px; }
+    .testimonial-text { font-size: var(--text-base); margin-top: 16px; }
+    .testimonial-avatar { width: 48px; height: 48px; font-size: var(--text-lg); }
+    .testimonials-nav button { width: 42px; height: 42px; }
     .section { padding-top: 72px; padding-bottom: 90px; }
     .hero { min-height: 100vh; min-height: 100svh; }
     .hero-content { padding: 24px 16px; }
