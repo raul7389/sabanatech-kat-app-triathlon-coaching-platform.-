@@ -39,9 +39,10 @@ const T = {
         about_tag:'Meet Me', about_title:'About Me',
         about_subtitle:'Your IRONMAN Certified Coach on the Road to the Finish Line',
         about_h3:'Training Champions Since 2021',
-        about_p1:"I'm Katherine Gomez Aya, IRONMAN Certified Coach and triathlon specialist — 16 years as both athlete and coach, having lived every stage of the journey: the early mornings, long training sessions, mental battles, and the satisfaction of crossing the finish line.",
-        about_p2:'Since 2021, I coach athletes of all levels, from first-timers to competitors targeting IRONMAN 70.3 and 140.6. Every plan is fully personalized — blending sports science, structured methodology, and a champion\'s mindset across swimming, cycling, and running to maximize performance and minimize injury risk.',
-        about_p3:'My mission: guide you step by step toward your goals — your first Sprint Triathlon, a 70.3, or the podium at a full IRONMAN 140.6.',
+        about_p1:"I'm Katherine Gomez Aya, IRONMAN Certified Coach and triathlon specialist, 16 years as both athlete and coach, having lived every stage of the journey: the early mornings, long training sessions, mental battles, and the satisfaction of crossing the finish line.",
+        about_p2:'Since 2021, I coach athletes of all levels, from first-timers to competitors targeting IRONMAN 70.3 and 140.6. Every plan is fully personalized, blending sports science, structured methodology, and a champion\'s mindset across swimming, cycling, and running to maximize performance and minimize injury risk.',
+        about_p3:'My mission: guide you step by step toward your goals, your first Sprint Triathlon, a 70.3, or the podium at a full IRONMAN 140.6.',
+        about_card1_label:'Methodology', about_card2_label:'Mission',
         about_p4:'Because every finish line starts with a decision to begin.',
         proven_title:'Proven Results',
         proven_stat1_title:'Ironman 70.3 · Full Ironman', proven_stat1_sub:'Finisher',
@@ -98,6 +99,7 @@ const T = {
         about_p1:'Soy Katherine Gomez Aya, Coach Certificada IRONMAN y especialista en triatlón — 16 años como atleta y entrenadora, habiendo vivido cada etapa del camino: los madrugones, las largas sesiones, las batallas mentales y la satisfacción de cruzar la línea de meta.',
         about_p2:'Desde 2021, entreno atletas de todos los niveles, desde principiantes hasta competidores de IRONMAN 70.3 y 140.6. Cada plan es completamente personalizado — combinando ciencia del deporte, metodología estructurada y mentalidad de campeón en natación, ciclismo y carrera para maximizar el rendimiento y minimizar lesiones.',
         about_p3:'Mi misión: guiarte paso a paso hacia tus metas — tu primer Triatlón Sprint, un 70.3 o el podio de un IRONMAN 140.6 completo.',
+        about_card1_label:'Metodología', about_card2_label:'Misión',
         about_p4:'Porque cada línea de meta comienza con la decisión de empezar.',
         proven_title:'Resultados Comprobados',
         proven_stat1_title:'Ironman 70.3 · Full Ironman', proven_stat1_sub:'Finisher',
@@ -154,6 +156,7 @@ const T = {
         about_p1:"Sono Katherine Gomez Aya, Coach Certificata IRONMAN e specialista di triathlon — 16 anni come atleta e coach, avendo vissuto ogni fase del percorso: le mattine presto, le lunghe sessioni, le battaglie mentali e la soddisfazione di tagliare il traguardo.",
         about_p2:"Dal 2021, alleno atleti di tutti i livelli, dai principianti ai concorrenti IRONMAN 70.3 e 140.6. Ogni piano è completamente personalizzato — fondendo scienza dello sport, metodologia strutturata e mentalità da campione nel nuoto, ciclismo e corsa per massimizzare le prestazioni e ridurre il rischio di infortuni.",
         about_p3:"La mia missione: guidarti passo dopo passo verso i tuoi obiettivi — il tuo primo Triathlon Sprint, un 70.3 o il podio di un IRONMAN 140.6 completo.",
+        about_card1_label:'Metodologia', about_card2_label:'Missione',
         about_p4:"Perché ogni traguardo inizia con la decisione di cominciare.",
         proven_title:'Risultati Comprovati',
         proven_stat1_title:'Ironman 70.3 · Full Ironman', proven_stat1_sub:'Finisher',
@@ -210,6 +213,7 @@ const T = {
         about_p1:"Sou Katherine Gomez Aya, Coach Certificada IRONMAN e especialista em triathlon — 16 anos como atleta e treinadora, tendo vivido cada etapa da jornada: os treinos matinais, as longas sessões, as batalhas mentais e a satisfação de cruzar a linha de chegada.",
         about_p2:"Desde 2021, treino atletas de todos os níveis, desde iniciantes até competidores mirando IRONMAN 70.3 e 140.6. Cada plano é totalmente personalizado — combinando ciência esportiva, metodologia estruturada e mentalidade de campeão em natação, ciclismo e corrida para maximizar o desempenho e minimizar lesões.",
         about_p3:"Minha missão: guiá-lo passo a passo em direção aos seus objetivos — seu primeiro Triathlon Sprint, um 70.3 ou o pódio de um IRONMAN 140.6 completo.",
+        about_card1_label:'Metodologia', about_card2_label:'Missão',
         about_p4:"Porque cada linha de chegada começa com a decisão de começar.",
         proven_title:'Resultados Comprovados',
         proven_stat1_title:'Ironman 70.3 · Full Ironman', proven_stat1_sub:'Finisher',
@@ -467,6 +471,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+    /* ─── TESTIMONIALS SWIPE ─── */
+    const tGrid = document.getElementById('testimonials-grid');
+    if (tGrid) {
+        let startX = 0;
+        let startY = 0;
+        let locked = false;
+        let scrollStart = 0;
+        tGrid.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+            scrollStart = tGrid.scrollLeft;
+            locked = false;
+        }, { passive: true });
+        tGrid.addEventListener('touchmove', (e) => {
+            if (locked) return;
+            const dx = Math.abs(e.touches[0].clientX - startX);
+            const dy = Math.abs(e.touches[0].clientY - startY);
+            if (dx > 10 && dx > dy) {
+                locked = true;
+                tGrid.style.overflow = 'hidden';
+            }
+        }, { passive: true });
+        tGrid.addEventListener('touchend', (e) => {
+            if (!locked) return;
+            tGrid.style.overflow = '';
+            const dx = e.changedTouches[0].clientX - startX;
+            tGrid.scrollLeft = scrollStart;
+            if (Math.abs(dx) > 40) {
+                scrollTestimonials(dx < 0 ? 1 : -1);
+            }
+        });
+    }
 
     document.addEventListener('click', (e) => {
         const menu = document.getElementById('mobile-menu');

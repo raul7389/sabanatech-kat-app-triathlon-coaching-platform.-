@@ -41,24 +41,24 @@
             <div class="contact-form">
                 <form id="contact-form" onsubmit="handleFormSubmit(event)" data-netlify="true" name="contact">
                     <div class="form-group">
+                        <input type="text" id="nombre" name="nombre" required placeholder=" ">
                         <label for="nombre" data-i18n="form_name_label">Full Name</label>
-                        <input type="text" id="nombre" name="nombre" required data-i18n-ph="form_name_placeholder" placeholder="Your name">
                     </div>
                     <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
                         <label for="email" data-i18n="form_email_label">Email Address</label>
-                        <input type="email" id="email" name="email" required data-i18n-ph="form_email_placeholder" placeholder="your@email.com">
                     </div>
                     <div class="form-group">
+                        <input type="tel" id="telefono" name="telefono" placeholder=" ">
                         <label for="telefono" data-i18n="form_phone_label">Phone</label>
-                        <input type="tel" id="telefono" name="telefono" data-i18n-ph="form_phone_placeholder" placeholder="+974 33 106 749">
                     </div>
                     <div class="form-group">
+                        <input type="text" id="servicio" name="servicio" placeholder=" ">
                         <label for="servicio" data-i18n="form_service_label">Training Type</label>
-                        <input type="text" id="servicio" name="servicio" data-i18n-ph="form_service_placeholder" placeholder="e.g.: Swimming, Cycling, Sprint Triathlon, Ironman...">
                     </div>
                     <div class="form-group">
+                        <textarea id="mensaje" name="mensaje" required placeholder=" "></textarea>
                         <label for="mensaje" data-i18n="form_message_label">Your Message</label>
-                        <textarea id="mensaje" name="mensaje" required data-i18n-ph="form_message_placeholder" placeholder="Tell me about your current level, your goal and any previous injuries..."></textarea>
                     </div>
                     <button type="submit" id="contact-submit-btn" class="btn btn-primary" style="width:100%;" data-i18n="btn_submit">Request Free Assessment</button>
                     <div id="contact-success" style="display:none; text-align:center; margin-top:20px; padding:16px; background:rgba(228,0,43,0.1); border:1px solid var(--iron-red); border-radius:8px; font-family:var(--font-display); color:var(--iron-red); letter-spacing:0.05em;"></div>
