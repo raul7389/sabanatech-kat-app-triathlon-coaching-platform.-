@@ -1,0 +1,82 @@
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: 30px;
+}
+.service-card {
+    background: rgba(26,26,26,0.7);
+    border: 1px solid rgba(228,0,43,0.15);
+    border-radius: 20px;
+    padding: 40px; transition: all 0.4s ease;
+    position: relative; overflow: hidden;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.service-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--iron-red), transparent);
+    transform: scaleX(0); transition: transform 0.4s ease;
+    border-radius: 20px 20px 0 0;
+}
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover {
+    border-color: rgba(228,0,43,0.7);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(228,0,43,0.15), 0 0 0 1px rgba(228,0,43,0.25);
+}
+.service-icon-wrap {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.service-icon-img {
+    height: 150px;
+    width: auto;
+    max-width: 260px;
+    display: block;
+    object-fit: contain;
+}
+.service-icon-img--ironman {
+    height: 95px;
+    max-width: 200px;
+    filter: brightness(0) saturate(100%) invert(14%) sepia(97%) saturate(3571%) hue-rotate(339deg) brightness(97%) contrast(105%);
+}
+.service-icon-img--ironman140 {
+    height: auto;
+    width: 210px;
+    max-width: 100%;
+}
+.service-icon-img--triathlon {
+    height: auto;
+    width: 240px;
+    max-width: 100%;
+    filter: brightness(0) saturate(100%) invert(14%) sepia(97%) saturate(3571%) hue-rotate(339deg) brightness(97%) contrast(105%);
+}
+.service-icon-img--running {
+    height: 130px;
+    width: auto;
+    max-width: none;
+    transform: scale(1.7);
+    transform-origin: center center;
+    filter: brightness(0) saturate(100%) invert(14%) sepia(97%) saturate(3571%) hue-rotate(339deg) brightness(97%) contrast(105%);
+}
+.service-card h3 {
+    font-family: var(--font-display); font-size: var(--text-2xl);
+    font-weight: var(--weight-semibold); margin-bottom: 15px; text-transform: uppercase;
+}
+.service-card:not(:first-child) h3 { margin-bottom: 32px; }
+.service-card p { color: rgba(255,255,255,0.7); line-height: var(--leading-relaxed); }
+.service-price {
+    font-family: var(--font-display); font-size: clamp(2.2rem, 4vw, 2.8rem);
+    font-weight: var(--weight-bold); color: var(--iron-red); margin-top: auto; padding-top: 20px;
+    letter-spacing: var(--tracking-sm);
+}
