@@ -1,0 +1,54 @@
+:root {
+    /* Brand colors */
+    --iron-red: #E4002B;
+    --iron-black: #080808;
+    --iron-dark: #1A1A1A;
+    --iron-gray: #2D2D2D;
+    --iron-light: #F5F5F5;
+    --iron-white: #FFFFFF;
+    --iron-accent: #FF1A1A;
+
+    /* Font families */
+    --font-display: 'Oswald', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+
+    /* Type scale */
+    --text-xs:      0.8rem;
+    --text-sm:      0.9rem;
+    --text-md:      0.95rem;
+    --text-base:    1rem;
+    --text-lg:      1.1rem;
+    --text-xl:      1.25rem;
+    --text-2xl:     1.5rem;
+    --text-3xl:     1.8rem;
+    --text-4xl:     2rem;
+    --text-stat:    3rem;
+    --text-display: clamp(2.5rem, 5vw, 4rem);
+    --text-hero:    clamp(3rem, 8vw, 6rem);
+    --text-quote:   6rem;
+
+    /* Responsive stat sizes */
+    --text-stat-md: 2.2rem;
+    --text-stat-sm: 1.8rem;
+
+    /* Letter spacing */
+    --tracking-sm:  1px;
+    --tracking-md:  1.5px;
+    --tracking-lg:  2px;
+    --tracking-xl:  3px;
+    --tracking-2xl: 4px;
+    --tracking-3xl: 5px;
+
+    /* Line height */
+    --leading-tight:   1;
+    --leading-normal:  1.6;
+    --leading-relaxed: 1.7;
+    --leading-loose:   1.8;
+
+    /* Font weight */
+    --weight-light:    300;
+    --weight-regular:  400;
+    --weight-medium:   500;
+    --weight-semibold: 600;
+    --weight-bold:     700;
+}

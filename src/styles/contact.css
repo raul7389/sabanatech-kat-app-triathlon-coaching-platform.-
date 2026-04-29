@@ -1,0 +1,75 @@
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.contact-info h3 {
+    font-family: var(--font-display); font-size: var(--text-3xl);
+    font-weight: var(--weight-semibold); margin-bottom: 30px; text-transform: uppercase;
+}
+.contact-item { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 30px; }
+.contact-icon {
+    width: 48px; height: 48px;
+    background: rgba(228,0,43,0.1);
+    border: 1px solid rgba(228,0,43,0.3);
+    border-radius: 14px;
+    display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+.contact-item:hover .contact-icon {
+    background: rgba(228,0,43,0.2);
+    border-color: rgba(228,0,43,0.6);
+    transform: scale(1.05);
+}
+.contact-icon svg {
+    width: 22px; height: 22px;
+    stroke: var(--iron-red); stroke-width: 1.8;
+    fill: none; stroke-linecap: round; stroke-linejoin: round;
+}
+.contact-item h4 {
+    font-family: var(--font-display); font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+    margin-bottom: 5px; text-transform: uppercase;
+    letter-spacing: var(--tracking-sm);
+}
+.contact-item p { color: rgba(255,255,255,0.7); font-size: var(--text-lg); line-height: var(--leading-relaxed); }
+.contact-form {
+    background: rgba(26,26,26,0.7);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px;
+}
+.form-group { margin-bottom: 25px; }
+.form-group label {
+    display: block; font-family: var(--font-display);
+    font-size: var(--text-sm); text-transform: uppercase;
+    letter-spacing: var(--tracking-lg);
+    margin-bottom: 10px; color: rgba(255,255,255,0.8);
+}
+.form-group input, .form-group textarea, .form-group select {
+    width: 100%; padding: 14px 16px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    color: var(--iron-white);
+    font-family: var(--font-body); font-size: var(--text-base);
+    transition: all 0.3s ease;
+    -webkit-appearance: none; appearance: none;
+}
+.form-group input::placeholder, .form-group textarea::placeholder {
+    color: rgba(255,255,255,0.35);
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--iron-red);
+    background: rgba(228,0,43,0.05);
+    box-shadow: 0 0 0 3px rgba(228,0,43,0.1);
+}
+.form-group input.valid, .form-group textarea.valid {
+    border-color: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34,197,94,0.1);
+}
+.form-group input.invalid, .form-group textarea.invalid {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239,68,68,0.1);
+}
+.form-group textarea { min-height: 150px; resize: vertical; }
